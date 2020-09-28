@@ -1,0 +1,320 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("");
+  background-color: #fdfdfd;
+  font-family: 'Varela Round', sans-serif;
+
+}
+
+a {
+  text-decoration: none !important;
+
+}
+
+/* fonts- how to use:
+font-family: 'Varela Round', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Amatic SC', cursive; */
+.title {
+  text-align: center;
+}
+
+.logo {
+  margin: 0 auto;
+  position: absolute;
+}
+
+.heading {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+
+  text-align: center;
+  font-style: 400;
+  font-size: 3rem;
+}
+
+.heading1 {
+  font-size: 4rem;
+  margin: 8px 0;
+  margin: 0 auto;
+}
+
+.heading2 {
+  margin: 0;
+  padding-bottom: 1.5%;
+
+}
+
+
+.heading-underlined .heading {
+  text-align: center;
+  margin: auto;
+  padding: 1.5%;
+}
+
+
+/* ***********************************welcome***************************************** */
+
+.navBar {
+  backdrop-filter: blur(5px);
+  backdrop-filter: brightness(60%);
+  padding: 5px 0;
+  /* 15 to top and bottom, 0 to the sides*/
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  height: 50px;
+}
+
+.navBarLink:hover {
+  color: #e4fffe;
+}
+
+.navBarLink {
+  padding: 0 20px;
+  color: #f5f5f5;
+  font-size: 1.2rem;
+}
+
+.fa-phone {
+  color: #fff;
+}
+
+.phoneNumber {
+  display: inline-block;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  padding-right: 20px;
+  font-size: 0.9rem;
+
+}
+
+.titleImg {
+  background: url("../images/rr.png");
+  width: 100%;
+}
+.titleNoImg {
+  padding: 0;
+  height: 600px;
+  border: 0;
+}
+
+/* ***********************************About us***************************************** */
+
+.aboutUs {
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  line-height: 2;
+  font-size: 1.2rem;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 2%;
+}
+
+/* ***********************************our brides - photo album***************************************** */
+
+
+#ourBridesID {
+  background-color: beige;
+  width: 100%;
+  height: auto;
+  text-align: center;
+
+}
+
+.ourBridesAlbum {
+  width: 98%;
+  margin-left: 20px;
+
+}
+
+.ourBridesImg {
+  background-color: blueviolet;
+
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.albumFrame {
+  height: 600px;
+}
+
+
+
+/* *********************************** contact us ***************************************** */
+.ctaImg {
+  text-align: center;
+  margin: 0 auto;
+  background: url("../images/curtain.jpg");
+  background-size: contain;
+  width: 100%;
+  height: 300px;
+  padding-top: 30px;
+  border: 0;
+  /* text-align: right; */
+  clip: rect(0, 100px, 200px, 0);
+
+}
+
+.contactDetail {
+  display: inline-block;
+  padding: 20px;
+}
+
+.inputBox {
+  border-radius: 50px;
+}
+
+.inputLabel {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.inputButton {
+  border-radius: 20px;
+
+}
+
+/* *********************************** How to get here***************************************** */
+
+
+#navigationID {
+  height: 650px;
+  background-color: #ffe6eb;
+
+}
+
+.navigation.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+
+iframe {
+
+  /* margin-top: 10%; */
+  width: 100%;
+  height: 100%;
+  frameborder: 0;
+  style: border: 0;
+
+}
+
+.navHeading {
+  font-size: 1.5rem;
+
+}
+
+.navigation {
+  padding: 20px;
+  margin: 10px;
+
+}
+
+.instructions {
+  margin-top: 10% 50% 0 0;
+  text-align: right;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+
+.address,
+.publicTrans {
+  display: inline-block;
+}
+
+.navins {
+  width: 50%;
+  display: inline-block;
+}
+
+.navLink {
+  font-size: 4rem;
+  padding: 0;
+}
+
+/* *********************************** footer ***************************************** */
+
+
+footer {
+  text-align: center;
+}
+
+.footer {
+  height: 150px;
+  background-color: black;
+  margin: 0;
+
+}
+
+.footerIcons {
+  text-align: center;
+}
+
+.iconLink {
+  padding: 30px;
+  font-size: 2rem;
+
+}
+
+.fa-waze {
+  color: #64b2cd;
+}
+
+.fa-whatsapp {
+  color: #00bd56;
+  font-size: 2rem;
+
+}
+
+.fa-envelope {
+  color: white;
+}
+
+.footerLogo {
+  width: 10%;
+  height: auto;
+  margin: auto;
+}
+
+.footerRights {
+  background-color: black;
+  color: beige;
+  text-align: center;
+  font-size: 10px;
+  font-size: 0.7rem;
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+.footer-logo {
+  padding: 50px 0px;
+}
+
+.lace {
+  width: 100%;
+}
+
+
+/* -------------------------------------media---------------------------------------- */
+
+@media all and (max-width: 320px) {
+  .contactDetail {
+    display: block;
+    padding: 5px;
+  }
+
+  .ctaImg {
+    height: 600px;
+  }
+
+
+
+
+
+
+}
