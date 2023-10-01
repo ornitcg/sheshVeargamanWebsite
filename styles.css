@@ -91,8 +91,11 @@ font-family: 'Amatic SC', cursive; */
 }
 
 .titleImg {
+  display: flex;
+  flex-grow: 1;
   background: url("images/rr.png");
-  width: 100%;
+  /* width: 100%; */
+  
 }
 .titleNoImg {
   padding: 0;
