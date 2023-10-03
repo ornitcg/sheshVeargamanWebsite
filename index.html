@@ -7,71 +7,61 @@
   <link rel="icon" href="icons\LogoIcon.ico">
   <!-- my styles -->
   <link rel="stylesheet" type="text/css" href="styles.css">
-
   <!-- bootstrap styles -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!-- google fonts -->
   <link
-    href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Rubik:300,300i,400,400i,500,500i,700,700i,900,900i|Varela+Round&display=swap&subset=hebrew"
-    rel="stylesheet">
+  href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Rubik:300,300i,400,400i,500,500i,700,700i,900,900i|Varela+Round&display=swap&subset=hebrew"
+  rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700&display=swap"
-    rel="stylesheet">
+  rel="stylesheet">
   <!-- font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-    integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
 </head>
-<!-- ******************************************************************************************************************** -->
+
+
+
 
 <body>
-  <div class="title">
+  <!-- ********************************************************** TOP TITLE********************************************************** -->
+  
+  <div class="top">
     <!-- <img class="logo" src="images\logo.png" alt=""> -->
-
     <h1 class="heading heading1">שש וארגמן</h1>
-
-
     <h1 class="heading heading2">שמלות כלה בחשמונאים</h1>
-
   </div>
-  <!--class="title"-->
-  <!-- ****************************************************title**************************************************************** -->
-
-
-  <section id="titleID">
-
-    <div class="titleNoImg titleImg">
-      <div class="navBar">
-
-        <i class="fas fa-phone"></i>
-        <p class="phoneNumber">054-4445194</p>
-        <a class="navBarLink" href="#">דף הבית</a>
-        <a class="navBarLink" href="#ourStoryID">מי אנחנו</a>
-        <a class="navBarLink" href="our brides.html">הכלות שלנו</a>
-        <a class="navBarLink" href="#">המלצות</a>
-        <a class="navBarLink" href="#navigationID">איך מגיעים</a>
-        <a class="navBarLink" href="#contactID">צרו קשר</a>
-        <a class="navBarLink" href="http://www.calot.net/"  target="_blank">לאתר הישן</a>
-
-
-      </div>
-      <!--class blurredBackground-->
-
-  </section>
+  <!-- ********************************************************** COVER ********************************************************** -->
+  <!-- <div class=" container"> -->
+    <div class="cover">
+        <nav class="navBar">
+          <ul class="navlist" >
+            <li> <a class="navBarItem fab fa-whatsapp iconLink " href="https://wa.me/+972544445194"></a></li>
+            <li> <a class="navBarItem">054-4445194</a></li>
+            <li> <a class="navBarItem" href="#contactID">צרו קשר</a></li>
+            <li> <a class="navBarItem" href="#navigationID">איך מגיעים</a></li>          
+            <li> <a class="navBarItem" href="our brides.html">הכלות שלנו</a></li>
+            <li><a class="navBarItem" href="http://www.calot.net/"  target="_blank">לאתר הישן</a></li>
+            <li><a class="navBarItem" href="#ourStoryID">מי אנחנו</a></li>          
+          </ul>        
+        </nav>
+        <img class="coverImg" src="C:\Users\tinko\MyRepos\sheshVeargamanWebsite\images\rr.png" alt="rakefet">      
+    </div>
+  <!-- </div> -->
   <!-- ************************************                                                                                                                                                                                                                                                                                                                                                                                       **************about us****************************************************************** -->
-
-
+  
+  
   <section id="ourStoryID">
     <img class="lace" src="images\laceBorder.png">
     <div class="aboutUs">
-
+      
       <div class="heading-underlined">
-
+        
         <h2 class="heading">קצת עלינו</h2>
-
+        
       </div>
-
-
+      
+      
       <p class="ourStory">
         סלון הכלות שש וארגמן הוקם לפני כ30 שנה על ידי יעל כהן גינדי, מעצבת ותופרת מומחית בתחום
         <br>
@@ -86,14 +76,14 @@
         אצלינו תפגשי צוות חם ומסור שיעשה הכל כדי לעזור לך, הכלה
         <br>
         למצוא את שמלת חלומותייך
-
+        
       </p>
-
+      
     </div>
   </section>
-
-
-
+  
+  
+  
   <!-- ******************************************************contact us************************************************************** -->
   <section id="contactID">
     <img class="lace" src="images\laceBorder.png">
@@ -103,58 +93,58 @@
       </div>
       <form method="post" action="mailto:tink.ornitc@gmail.com">
         <p class="contactDetail">
-
+          
           <input class="inputBox" name="comments" maxlength="500"></input>
           <label class="inputLabel">כתבי לנו </label>
-
+          
         </p>
-
+        
         <p class="contactDetail">
           <input class="inputBox" type="email" name="email_address">
           <label class="inputLabel">אימייל </label>
         </p>
-
-
+        
+        
         <p class="contactDetail">
           <input class="inputBox" type="text" name="first_name" required>
           <label class="inputLabel">שם</label>
-
+          
         </p>
         <p><button class="inputButton">שליחה</button></p>
       </form>
-
+      
     </div>
   </section> <!-- id = contact -->
-
+  
   <!-- ******************************************************how to get here******************************************************** -->
-
+  
   <section id="navigationID">
     <img class="lace" src="images\laceBorder.png">
-
+    
     <div class="heading-underlined">
       <h2 class="heading">איך מגיעים</h2>
     </div>
-
+    
     <div class="navigation row ">
       <!-- 2 sub divs-->
-
+      
       <div class="googleMap navins col-lg-6">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3386.062471619345!2d35.02517872135333!3d31.93206123398591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502cd6912964f39%3A0xd19d46e1938529ee!2z15TXqteZ16jXldepIDcsINeX16nXnteV16DXkNeZ150!5e0!3m2!1siw!2sil!4v1572432098421!5m2!1siw!2sil"
-          allowfullscreen="">
-        </iframe>
-
-
-      </div>
-      <!--google map iframe-->
-
-      <div class="instructions navins col-lg-6">
-        <h2 class="navHeadig">כתובתנו</h2>
-        <a href="https://www.waze.com/ul?ll=31.93223560%2C35.02314440&navigate=yes" class="fab fa-waze navLink"></a>
-        <p class="address">רחוב התירוש 7
-          <br>
-          יישוב חשמונאים</p>
-
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3386.062471619345!2d35.02517872135333!3d31.93206123398591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502cd6912964f39%3A0xd19d46e1938529ee!2z15TXqteZ16jXldepIDcsINeX16nXnteV16DXkNeZ150!5e0!3m2!1siw!2sil!4v1572432098421!5m2!1siw!2sil"
+        allowfullscreen="">
+      </iframe>
+      
+      
+    </div>
+    <!--google map iframe-->
+    
+    <div class="instructions navins col-lg-6">
+      <h2 class="navHeadig">כתובתנו</h2>
+      <a href="https://www.waze.com/ul?ll=31.93223560%2C35.02314440&navigate=yes" class="fab fa-waze navLink"></a>
+      <p class="address">רחוב התירוש 7
+        <br>
+        יישוב חשמונאים</p>
+        
         <h2 class="publicTrans">הגעה בתחבורה ציבורית</h2>
         <p class="publicTrans">
           מירושלים: קווים 310, 320, 330, 340
@@ -171,47 +161,47 @@
           <br>
           לגשת לכניסה הימנית של הבנין ולעלות במדרגות
         </p>
-
-
-
+        
+        
+        
       </div>
       <!--class instructions-->
-
+      
     </div> <!-- class navigation -->
-
-
+    
+    
   </section> <!-- navigationID -->
   <!-- ******************************************************************************************************************** -->
-
-
-
+  
+  
+  
 </body>
 
 <footer>
   <!-- <p>Photo by Annie Spratt on Unsplash</p> -->
   <img class="lace" src="images\laceBorder.png">
   <div class="footer">
-
+    
     <div class="footerIcons">
-
-
+      
+      
       <a href="https://www.waze.com/ul?ll=31.93223560%2C35.02314440&navigate=yes" class="fab fa-waze iconLink"></a>
       <a href="https://www.facebook.com/profile.php?id=100005709820063" class="fab fa-facebook iconLink"></a>
       <a class="fab fa-whatsapp iconLink" href="https://wa.me/+972544445194"></a>
-
+      
       <i class="fas fa-envelope iconLink"></i>
-
+      
     </div>
     <div class="footer footer-logo">
-
+      
       <img src="images\logo.png" class="footerLogo" alt="logo">
       <p class="footerRights">נבנה ע"י שש וארגמן All rights reserved 2019</p>
-
+      
     </div>
   </div>
-
-
-
+  
+  
+  
 </footer>
 
 </html>

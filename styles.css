@@ -4,19 +4,15 @@ body {
   background: url("");
   background-color: #fdfdfd;
   font-family: 'Varela Round', sans-serif;
-
+  
 }
 
-a {
-  text-decoration: none !important;
-
-}
 
 /* fonts- how to use:
 font-family: 'Varela Round', sans-serif;
 font-family: 'Rubik', sans-serif;
 font-family: 'Amatic SC', cursive; */
-.title {
+.top {
   text-align: center;
 }
 
@@ -28,7 +24,7 @@ font-family: 'Amatic SC', cursive; */
 .heading {
   font-family: 'Amatic SC', cursive;
   font-weight: bold;
-
+  
   text-align: center;
   font-style: 400;
   font-size: 3rem;
@@ -43,7 +39,7 @@ font-family: 'Amatic SC', cursive; */
 .heading2 {
   margin: 0;
   padding-bottom: 1.5%;
-
+  
 }
 
 
@@ -54,53 +50,86 @@ font-family: 'Amatic SC', cursive; */
 }
 
 
-/* ***********************************welcome***************************************** */
-
-.navBar {
-  backdrop-filter: blur(5px);
-  backdrop-filter: brightness(60%);
-  padding: 5px 0;
-  /* 15 to top and bottom, 0 to the sides*/
-  margin: 0;
+/* ***********************************NAV***************************************** */
+.cover {
+  position: relative;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  text-align: center;
-  height: 50px;
-}
+  height: 100vh;
 
-.navBarLink:hover {
-  color: #e4fffe;
 }
-
-.navBarLink {
-  padding: 0 20px;
-  color: #f5f5f5;
-  font-size: 1.2rem;
+.coverImg {
+  width: auto;
 }
 
 .fa-phone {
   color: #fff;
 }
 
+
+li{
+
+}
+
+li > .navBarItem {
+  align-self: center;
+  text-decoration: none ;  
+}
+
+.navBar {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  backdrop-filter: blur(5px);
+  backdrop-filter: brightness(60%);
+  width: 100%;
+  height: 70px; 
+}
+
+
+
+.navlist{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+
+.navBarItem:hover {
+  font-weight: 500;
+}
+
+.navBarItem {
+  padding: 0 20px;
+  color: #f5f5f5;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+
+
 .phoneNumber {
   display: inline-block;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   padding-right: 20px;
-  font-size: 0.9rem;
-
+  font-size: 0.9rem;  
 }
 
-.titleImg {
-  display: flex;
-  flex-grow: 1;
-  background: url("images/rr.png");
-  /* width: 100%; */
-  
-}
-.titleNoImg {
-  padding: 0;
-  height: 600px;
-  border: 0;
+
+
+
+@media only screen and (max-width: 600px) {
+  .navBarItem {
+    padding: 0 10px;
+    color: #f5f5f5;
+    font-size: 1rem;
+  }
 }
 
 /* ***********************************About us***************************************** */
@@ -123,18 +152,18 @@ font-family: 'Amatic SC', cursive; */
   width: 100%;
   height: auto;
   text-align: center;
-
+  
 }
 
 .ourBridesAlbum {
   width: 98%;
   margin-left: 20px;
-
+  
 }
 
 .ourBridesImg {
   background-color: blueviolet;
-
+  
   width: 100px;
   height: 200px;
   object-fit: cover;
@@ -158,7 +187,7 @@ font-family: 'Amatic SC', cursive; */
   border: 0;
   /* text-align: right; */
   clip: rect(0, 100px, 200px, 0);
-
+  
 }
 
 .contactDetail {
@@ -176,7 +205,7 @@ font-family: 'Amatic SC', cursive; */
 
 .inputButton {
   border-radius: 20px;
-
+  
 }
 
 /* *********************************** How to get here***************************************** */
@@ -185,7 +214,7 @@ font-family: 'Amatic SC', cursive; */
 #navigationID {
   height: 650px;
   background-color: #ffe6eb;
-
+  
 }
 
 .navigation.row {
@@ -196,24 +225,24 @@ font-family: 'Amatic SC', cursive; */
 
 
 iframe {
-
+  
   /* margin-top: 10%; */
   width: 100%;
   height: 100%;
   frameborder: 0;
   style: border: 0;
-
+  
 }
 
 .navHeading {
   font-size: 1.5rem;
-
+  
 }
 
 .navigation {
   padding: 20px;
   margin: 10px;
-
+  
 }
 
 .instructions {
@@ -251,7 +280,7 @@ footer {
   height: 150px;
   background-color: black;
   margin: 0;
-
+  
 }
 
 .footerIcons {
@@ -259,9 +288,7 @@ footer {
 }
 
 .iconLink {
-  padding: 30px;
-  font-size: 2rem;
-
+  
 }
 
 .fa-waze {
@@ -271,7 +298,7 @@ footer {
 .fa-whatsapp {
   color: #00bd56;
   font-size: 2rem;
-
+  
 }
 
 .fa-envelope {
@@ -310,14 +337,14 @@ footer {
     display: block;
     padding: 5px;
   }
-
+  
   .ctaImg {
     height: 600px;
   }
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
 }
