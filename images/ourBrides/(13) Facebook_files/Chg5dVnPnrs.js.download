@@ -1,3 +1,0 @@
-;/*FB_PKG_DELIM*/
-
-__d("CometUFIDeleteCommentMutationWrapper",["cr:1564"],(function(a,b,c,d,e,f,g){"use strict";var h=(c=b("cr:1564"))!=null?c:{commitDeleteCommentMutation:function(a,b){return{dispose:function(){}}},getDeleteCommentUpdaterForDisplayComments:function(a){return function(){}},moveSubrepliesToParentForDisplayComments:function(a,b,c){return}};function a(){return h}g["default"]=a}),98);
