@@ -1,0 +1,4 @@
+;/*FB_PKG_DELIM*/
+
+__d("LSEncryptedBackupsStatusTriggerUpsert",[],(function(a,b,c,d,e,f){function a(){var a=arguments,b=a[a.length-1];b.n;var c=[];return b.seq([function(a){return b.seq([function(a){return b.fe(b.ftr(b.db.table(195).fetch(),function(a){return!0}),function(a){return a["delete"]()})},function(a){return b.db.table(195).add({pk:void 0})}])},function(a){return b.resolve(c)}])}b=a;f["default"]=b}),66);
+__d("LSTruncatePakeMessagesDatabase",[],(function(a,b,c,d,e,f){function a(){var a=arguments,b=a[a.length-1];b.n;var c=[];return b.seq([function(c){return a[0]?b.fe(b.db.table(258).fetch(),function(a){return a["delete"]()}):b.fe(b.db.table(258).fetch(),function(a){return a["delete"]()})},function(a){return b.resolve(c)}])}b=a;f["default"]=b}),66);
