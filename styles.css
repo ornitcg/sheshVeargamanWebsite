@@ -329,23 +329,25 @@ footer {
 
 
 .gallery {
-  width: 100%;
+  width: auto;
 
   margin: 20px 50px;
-  columns: 20rem ;
+  columns: 15rem ;
   column-gap: 20px;
 }
 
 
 
 .gallery  .box {
-  width: 100%;
+  width: auto;
   margin-bottom:  10px;
   break-inside: avoid;
 }
 
 .gallery .box img {
   max-width: 100%;
+    padding-top: 0px;
+
   border-radius: 15px;
 }
 
