@@ -1,4 +1,4 @@
-// const folderUrl = 'C:\Users\tinko\MyRepos\sheshVeargamanWebsite\images\ourBrides';
+// const folderUrl = 'C:\Users\tinko\MyRepos\sheshVeargamanWebsite\assets\ourBrides';
 
 // Function to fetch the list of files in the folder
 // function fetchFiles() {

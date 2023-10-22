@@ -159,7 +159,7 @@ li > .navBarItem {
 .ctaImg {
   text-align: center;
   margin: 0 auto;
-  background: url("images/curtain.jpg");
+  background: url("assets/curtain.jpg");
   background-size: contain;
   width: 100%;
   height: 300px;
