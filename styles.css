@@ -129,7 +129,7 @@ li > .navBarItem {
 
 @media only screen and (max-width: 500px) {
   .navBarItem {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   
 }
