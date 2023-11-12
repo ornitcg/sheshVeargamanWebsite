@@ -1,9 +1,6 @@
-// const folderUrl = 'C:\Users\tinko\MyRepos\sheshVeargamanWebsite\assets\ourBrides';
+function zoomIn() {
+    document.getElementByClassName("box").style.width = "500px";
+    // document.getElementsByClassName("box");
+    
+}
 
-// Function to fetch the list of files in the folder
-// function fetchFiles() {
-//     try {
-        
-// alert(document.getElementsByClassName("lace"));
-
-document.getElementsByClassName("heading").setAttribute("font-size", "13rem");

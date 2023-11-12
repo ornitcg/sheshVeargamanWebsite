@@ -47,47 +47,19 @@ font-family: 'Amatic SC', cursive; */
 .heading-underlined .heading {
   text-align: center;
   margin: auto;
-  padding: 1.5%;
+  /* padding: 1.5%; */
 }
 
 
 /* ***********************************NAV***************************************** */
-.cover {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 150vh;
-  
-}
-.coverImg {
-  margin: 0px;
-  width: 100%;
-  
-}
 
-.fa-phone {
-  color: #fff;
-}
+
+
 
 li > .navBarItem {
   align-self: center;
   text-decoration: none ;  
 }
-
-/* .navBar {
-  
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0 10px 0;
-  backdrop-filter: blur(5px);
-  backdrop-filter: brightness(60%);
-  background-color: #fff;
-  border-style: ridge none ridge none;
-  width: 100%;
-  height: 70px; 
-} */
-
 
 
 .navlist{
@@ -113,8 +85,6 @@ li > .navBarItem {
   text-align: center;
 }
 
-
-
 .phoneNumber {
   display: inline-block;
   color: #fff;
@@ -124,31 +94,13 @@ li > .navBarItem {
 }
 
 
-@media only screen and (max-width: 400px) {
-  .navBarItem {
-    font-size: 0.6rem;
-  }
-  
-  .navBar {
-    
-    height: 120px; 
-    padding-bottom: 50px;
-  }
-  
-}
 
-@media only screen and (max-width: 500px) {
-  .navBarItem {
-    font-size: 1rem;
-  }
-  
-}
-@media only screen and (max-width: 900px) {
-  .navBar {    
-    padding-top: 0px;
-    height: 80px;     
-  }
-  
+
+/************************************ Carousel *****************************************/
+
+.carousel-inner {
+  width: auto;
+  height: 150vh;  
 }
 
 /* ***********************************About us***************************************** */
@@ -157,10 +109,12 @@ li > .navBarItem {
   font-family: 'Rubik', sans-serif;
   text-align: center;
   line-height: 2;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   width: 80%;
   margin: 0 auto;
   padding-top: 2%;
+  padding-bottom: 2%;
+  
 }
 
 
@@ -169,20 +123,21 @@ li > .navBarItem {
 .ctaImg {
   text-align: center;
   margin: 0 auto;
-  background: url("./assets/otherImages/curtain.jpg");
+  background-image: url('../assets/otherImages/curtain.jpg');
+  background-attachment: fixed;
   background-size: contain;
   width: 100%;
-  height: 300px;
+  height: 100%;
   padding-top: 30px;
+  padding-bottom: 60px;
+  
   border: 0;
-  /* text-align: right; */
-  clip: rect(0, 100px, 200px, 0);
   
 }
 
 .contactDetail {
-  display: inline-block;
-  padding: 20px;
+  /* display: inline-block; */
+  padding: 70px;
 }
 
 .inputBox {
@@ -198,19 +153,31 @@ li > .navBarItem {
   
 }
 
+.contactFont {
+  /* font-family: 'Amatic SC', cursive; */
+  text-decoration: none;
+  color: black;
+}
+
 /* *********************************** How to get here***************************************** */
 
 
 #navigationID {
-  height: 650px;
-  background-color: #ffe6eb;
+  padding-top: 20px;
+  height: auto;
+  /* background-color: #ffe6eb;  */
+  
   
 }
 
-.navigation.row {
-  margin-right: 0;
-  margin-left: 0;
+.navigation {
+  padding: 20px 70px 50px 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  
 }
+
 
 
 
@@ -220,21 +187,17 @@ iframe {
 }
 
 .navHeading {
-  font-size: 1.5rem;
-  
+  font-size: 1.5rem;  
 }
 
-.navigation {
-  padding: 20px;
-  margin: 10px;
-  
-}
+
 
 .instructions {
   margin-top: 10% 50% 0 0;
   text-align: right;
   display: inline-block;
   width: 50%;
+  font-size: 1.4rem;
 }
 
 .address,
@@ -258,7 +221,7 @@ iframe {
 .footer {
   text-align: center;  
   height: 300px;
-  background-color: rgb(248, 243, 236); 
+  background-color: #F3DAD8; 
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -299,6 +262,55 @@ iframe {
 }
 
 
+
+
+
+
+
+/***********************************Image gallery *******************/
+
+.box {
+  width: auto;
+  display: flex;
+}
+
+.gallery {
+  width: auto;  
+  margin: 20px 50px;
+  columns: 15rem ;
+  column-gap: 20px;
+}
+
+.gallery  .box {
+  width: auto;
+  margin-bottom:  10px;
+  break-inside: avoid;
+}
+
+.gallery .box img {
+  max-width: 100%;
+  padding-top: 0px;  
+  border-radius: 15px;
+  transition: transform 1s;
+  
+}
+
+.gallery .box img:hover{
+  transform: scale(1.1);
+  
+}
+
+
+.divider1 {
+  height: 20px;
+  background-image: url("../assets/otherImages/divider1.png ");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+
 /* -------------------------------------media---------------------------------------- */
 
 @media all and (max-width: 320px) {
@@ -314,42 +326,45 @@ iframe {
 }
 
 
-
-
-/***********************************Image gallery *******************/
-
-
-
-.box {
-  width: auto;
-  display: flex;
-  transition: all 0.3s linear;
-}
-
-
-
-.gallery {
-  width: auto;
+@media only screen and (max-width: 400px) {
+  .navBarItem {
+    font-size: 0.6rem;
+  }
   
-  margin: 20px 50px;
-  columns: 15rem ;
-  column-gap: 20px;
-}
-
-
-
-.gallery  .box {
-  width: auto;
-  margin-bottom:  10px;
-  break-inside: avoid;
-}
-
-.gallery .box img {
-  max-width: 100%;
-  padding-top: 0px;
+  .navBar {
+    
+    height: 120px; 
+    padding-bottom: 50px;
+  }
   
-  border-radius: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+  .navBarItem {
+    font-size: 1rem;
+  }
+  
+}
+@media only screen and (max-width: 900px) {
+  .navBar {    
+    padding-top: 0px;
+    height: 80px;     
+  }
+  
+}
+
+@media only screen and (max-width: 1000px) {
+  .navigation {    
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
 }
 
 
-
+.iconsTest {
+  background-color: aqua;
+  height: 200px;
+  width: 100%;
+}
