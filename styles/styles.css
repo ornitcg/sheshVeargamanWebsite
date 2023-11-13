@@ -100,7 +100,7 @@ li > .navBarItem {
 
 .carousel-inner {
   width: auto;
-  height: 150vh;  
+  height: 120vh;  
 }
 
 /* ***********************************About us***************************************** */
@@ -134,10 +134,17 @@ li > .navBarItem {
   border: 0;
   
 }
+#contact{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  
+}
 
 .contactDetail {
   /* display: inline-block; */
   padding: 70px;
+
 }
 
 .inputBox {
@@ -157,6 +164,7 @@ li > .navBarItem {
   /* font-family: 'Amatic SC', cursive; */
   text-decoration: none;
   color: black;
+  font-size: 2rem;
 }
 
 /* *********************************** How to get here***************************************** */
