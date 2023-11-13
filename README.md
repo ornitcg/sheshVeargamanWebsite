@@ -2,6 +2,6 @@
 Wedding salon shesh veargaman website project
 
 my first (and undone) project with HTML and CSS
-this website is currentky not in use 
+this website is currently not in use 
 
 
