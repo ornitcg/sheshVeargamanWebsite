@@ -4,11 +4,12 @@
   box-sizing: border-box;
 }
 
-
 body {  
   background-color: #fdfdfd;
   font-family: 'Varela Round', sans-serif;  
 }
+
+
 
 
 /* fonts- how to use:
@@ -74,8 +75,7 @@ font-family: 'Amatic SC', cursive; */
   &:hover {
     font-weight: 500;
     border: transparent;
-    border-bottom: #070303;
-    
+    border-bottom: #070303;    
     border-width: 1px;
     border-style: dashed;
   }
@@ -311,7 +311,7 @@ iframe {
 
 
 /* -------------------------------------media---------------------------------------- */
-
+/* 
 @media all and (max-width: 320px) {
   .contactDetail {
     display: block;
@@ -321,8 +321,11 @@ iframe {
   .ctaImg {
     height: 600px;
   }
+  .contactFont {
+    font-size: 0.5rem;
+  }
   
-}
+} */
 
 
 @media only screen and (max-width: 400px) {
@@ -335,22 +338,22 @@ iframe {
     height: 120px; 
     padding-bottom: 50px;
   }
-
+  
   .carousel-inner {
-  width: auto;
-  height: 60vh;  
-}
-
-.instructions {
-  font-size: 1rem;
-  width: 100%;
-}
-
-.googleMap {
-  width: 100%;
-}
-
-
+    width: auto;
+    height: 60vh;  
+  }
+  
+  .instructions {
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .contactFont {
+    font-size: 1.5rem;
+  }
+  
+  
   
 }
 
@@ -360,20 +363,37 @@ iframe {
   }
   
 }
+
 @media only screen and (max-width: 900px) {
   .navBar {    
     padding-top: 0px;
     height: 80px;     
   }
   
+  
+  .publicTransInst  .address   {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+  
+  .googleMap {
+    margin-top: 50px;
+    width: 70%;
+    height: 50vh;;
+  }
+  
+ 
+  
 }
 
 @media only screen and (max-width: 1000px) {
-  .navigation {    
+  .navigation {   
+    padding: 20px 20px 50px 20px; 
     flex-direction: column;
     align-items: center;
     
   }
+  
   
 }
 
