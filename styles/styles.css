@@ -61,11 +61,13 @@ font-family: 'Amatic SC', cursive; */
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 40px;
   
 }
 
+
+
 .navBarWord {
-  padding: 0 20px;
   color: #070303;
   font-size: 1.3rem;  
   text-align: center;
@@ -76,8 +78,8 @@ font-family: 'Amatic SC', cursive; */
     font-weight: 500;
     border: transparent;
     border-bottom: #070303;    
-    border-width: 1px;
-    border-style: dashed;
+    border-width: 2px;
+    border-style: solid;
   }
 }
 
@@ -135,9 +137,7 @@ font-family: 'Amatic SC', cursive; */
 }
 
 .contactDetail {
-  /* display: inline-block; */
-  padding: 70px;
-  
+  padding: 70px;  
 }
 
 .inputBox {
@@ -165,22 +165,15 @@ font-family: 'Amatic SC', cursive; */
 
 #navigationID {
   padding-top: 20px;
-  height: auto;
-  /* background-color: #ffe6eb;  */
-  
-  
+  height: auto;  
 }
 
 .navigation {
   padding: 20px 70px 50px 70px;
   display: flex;
   justify-content: center;
-  flex-direction: row-reverse;
-  
+  flex-direction: row-reverse;  
 }
-
-
-
 
 iframe {  
   width: 100%;
@@ -382,7 +375,7 @@ iframe {
     height: 50vh;;
   }
   
- 
+  
   
 }
 
@@ -392,8 +385,7 @@ iframe {
     flex-direction: column;
     align-items: center;
     
-  }
-  
+  }  
   
 }
 
