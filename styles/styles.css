@@ -59,6 +59,8 @@ font-family: 'Amatic SC', cursive; */
 li > .navBarItem {
   align-self: center;
   text-decoration: none ;  
+  /* border: 1px;
+  border-color: #070303; */
 }
 
 
