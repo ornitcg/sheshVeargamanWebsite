@@ -53,17 +53,6 @@ font-family: 'Amatic SC', cursive; */
 
 /* ***********************************NAV***************************************** */
 
-
-
-
-li > .navBarItem {
-  align-self: center;
-  text-decoration: none ;  
-  /* border: 1px;
-  border-color: #070303; */
-}
-
-
 .navlist{
   list-style: none;
   display: flex;
@@ -74,17 +63,22 @@ li > .navBarItem {
   
 }
 
-
-.navBarItem:hover {
-  font-weight: 500;
-}
-
-.navBarItem {
+.navBarWord {
   padding: 0 20px;
   color: #070303;
-  font-size: 1.3rem;
-  
+  font-size: 1.3rem;  
   text-align: center;
+  align-self: center;
+  text-decoration: none ; 
+  
+  &:hover {
+    font-weight: 500;
+    border: transparent;
+    border-bottom: #070303;
+    
+    border-width: 1px;
+    border-style: dashed;
+  }
 }
 
 .phoneNumber {
@@ -94,8 +88,6 @@ li > .navBarItem {
   padding-right: 20px;
   font-size: 0.9rem;  
 }
-
-
 
 
 /************************************ Carousel *****************************************/
@@ -146,7 +138,7 @@ li > .navBarItem {
 .contactDetail {
   /* display: inline-block; */
   padding: 70px;
-
+  
 }
 
 .inputBox {
@@ -247,6 +239,7 @@ iframe {
 
 .iconLink { 
   font-size: 3rem; 
+  text-decoration: none;
 }
 
 
@@ -303,12 +296,13 @@ iframe {
   border-radius: 15px;
   transition: transform 1s;
   
-}
-
-.gallery .box img:hover{
-  transform: scale(1.1);
+  &:hover {
+    transform: scale(1.1);
+  }
   
 }
+
+
 
 
 .divider1 {
