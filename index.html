@@ -3,114 +3,86 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>improve branch</title>
-  <link rel="icon" href="icons\LogoIcon.ico">
-  <!-- my styles -->
-  <link rel="stylesheet" type="text/css" href="styles/styles.css">
-  <!-- bootstrap styles -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <!-- google fonts -->
-  <link
-  href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Rubik:300,300i,400,400i,500,500i,700,700i,900,900i|Varela+Round&display=swap&subset=hebrew"
-  rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700&display=swap"
-  rel="stylesheet">
-  <!-- font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-  integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שש וארגמן — שמלות כלה בחשמונאים</title>
+  <link rel="icon" href="icons/LogoIcon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Varela+Round&display=swap&subset=hebrew" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles-new.css">
 </head>
 
-
-
-
 <body>
-  <!-- ********************************************************** TOP TITLE********************************************************** -->
-  
-  <div class="top">
-    <!-- <img class="logo" src="assets\logo.png" alt=""> -->
-    <h1 class="heading heading1">שש וארגמן</h1>
-    <div class="divider1"></div>
-    
-    <h1 class="heading heading2">שמלות כלה בחשמונאים</h1>
-  </div>
-  
-  
-  <nav class="navbar-nav">
-    <ul class="navlist" >
-      
-      <li> <a class="navBarItem fa-brands fa-whatsapp iconLink " href="https://wa.me/+972544445194 " style="color: #1d8d21;" target="_blank"></a></li>
-      <li> <a class="navBarItem navBarWord">054-4445194</a></li>
-      <li> <a class="navBarItem navBarWord" href="#contactID">צרו קשר</a></li>
-      <li> <a class="navBarItem navBarWord" href="#navigationID">איך מגיעים</a></li>
-      <li><a class="navBarItem navBarWord" href="http://www.calot.net/"  target="_blank">לאתר הישן</a></li>          
-      <li> <a class="navBarItem navBarWord" href="ourBrides.html" target="_blank">הכלות שלנו</a></li>            
-      <li><a class="navBarItem navBarWord" href="#ourStoryID">מי אנחנו</a></li>          
-    </ul>        
+
+  <header class="site-header">
+    <h1 class="site-title">שש וארגמן</h1>
+    <p class="site-subtitle">שמלות כלה בחשמונאים</p>
+    <div class="lace-divider"></div>
+  </header>
+
+  <nav class="navbar" id="mainNav">
+
+    <button
+      class="hamburger-btn"
+      aria-label="פתח תפריט"
+      onclick="
+        var nav = document.getElementById('mainNav');
+        nav.classList.toggle('open');
+        this.setAttribute('aria-label', nav.classList.contains('open') ? 'סגור תפריט' : 'פתח תפריט');
+      "
+    >
+      <i class="fas fa-bars  icon-open"></i>
+      <i class="fas fa-times icon-close"></i>
+    </button>
+
+    <ul class="nav-list">
+      <li><a class="nav-link" href="#ourStoryID">מי אנחנו</a></li>
+      <li><a class="nav-link" href="ourBrides.html">הכלות שלנו</a></li>
+      <li><a class="nav-link" href="http://www.calot.net/" target="_blank">לאתר הישן</a></li>
+      <li><a class="nav-link" href="#navigationID">איך מגיעים</a></li>
+      <li><a class="nav-link" href="#contactID">צרו קשר</a></li>
+      <li><a class="nav-link" href="tel:0544445194">054-4445194</a></li>
+      <li><a class="nav-link nav-whatsapp fab fa-whatsapp" href="https://wa.me/+972544445194" target="_blank" aria-label="WhatsApp"></a></li>
+    </ul>
+
   </nav>
-  
-  
-  
-  
-  
-  <!-- ********************************************************** carousel ********************************************************** -->
-  
-  <!-- <img class="lace" src="assets\laceBorder.png"> -->
-  <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    
-    
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <!-- <img src="C:\Users\tinko\MyRepos\sheshVeargamanWebsite\assets\otherImages\rr.png" alt="rakefet" class="d-block w-100" > -->
-        <img src="./assets/otherImages/rr.jpg" alt="rakefet" class="d-block w-100" >
-        
-      </div>
-      <div class="carousel-item">
-        <img src="./assets/otherImages/0329 cropped.jpg"  alt="" class="d-block w-100">
-      </div>
-      <div class="carousel-item">
-        <img src=".\assets\ourBrides\1.jpg"  alt="" class="d-block w-100">
-      </div>
-      <div class="carousel-item">
-        <img src="./assets/ourBrides/22.jpg"  alt="" class="d-block w-100">
-      </div>
-      
+
+  <!-- Hero Carousel -->
+  <section class="hero-carousel">
+
+    <div class="carousel-slide active">
+      <img src="assets/otherImages/rr.jpg" alt="שש וארגמן">
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+    <div class="carousel-slide">
+      <img src="assets/ourBrides/1.jpg" alt="הכלות שלנו">
+    </div>
+    <div class="carousel-slide">
+      <img src="assets/ourBrides/22.jpg" alt="הכלות שלנו">
+    </div>
+
+    <button class="carousel-arrow prev" aria-label="הקודם" onclick="carouselMove(-1)">
+      <i class="fas fa-chevron-right"></i>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+    <button class="carousel-arrow next" aria-label="הבא" onclick="carouselMove(1)">
+      <i class="fas fa-chevron-left"></i>
     </button>
-    
-  </div>
-  
-  
-  
-  
-  
-  <!-- ***************************************** ABOUT US ***********************************                                                                                                                                                                                                                                                                                                                                                                                       **************about us****************************************************************** -->
-  
-  
-  <div id="ourStoryID">
-    <!-- <img class="lace" src="assets/otherImages/laceBorder.png"> -->
-    <div class="aboutUs">
-      
-      <div class="heading-underlined">
-        
-        <h2 class="heading">מי אנחנו</h2>
-        <div class="divider1"></div>
-        
-        
-      </div>
-      
-      
-      <p class="ourStory">
+
+    <div class="carousel-dots">
+      <button class="carousel-dot active" onclick="carouselGoTo(0)" aria-label="תמונה 1"></button>
+      <button class="carousel-dot"        onclick="carouselGoTo(1)" aria-label="תמונה 2"></button>
+      <button class="carousel-dot"        onclick="carouselGoTo(2)" aria-label="תמונה 3"></button>
+    </div>
+
+  </section>
+
+  <!-- About Us -->
+  <section class="about-section" id="ourStoryID">
+    <div class="about-inner">
+      <h2 class="section-title">מי אנחנו</h2>
+      <div class="lace-divider"></div>
+      <p class="about-text">
         סלון הכלות שש וארגמן הוקם לפני כ30 שנה על ידי יעל כהן גינדי, מעצבת ותופרת מומחית בתחום
         <br>
-        במקום יש מתפרה גדולה , חדרי מדידה , חנות בדים מטפחות ותכשיטים ואפילו חזיות להתאמה מושלמת
+        במקום יש מתפרה גדולה, חדרי מדידה, חנות בדים מטפחות ותכשיטים ואפילו חזיות להתאמה מושלמת
         <br>
         השמלות בסלון נתפרות על ידי צוות מיומן של מעצבות ותופרות
         <br>
@@ -121,128 +93,140 @@
         אצלינו תפגשי צוות חם ומסור שיעשה הכל כדי לעזור לך, הכלה
         <br>
         למצוא את שמלת חלומותייך
-        
       </p>
-      
     </div>
-  </div>
-  
-  
-  
-  <!-- ******************************************************contact us************************************************************** -->
-  <section id="contactID">
-    <!-- <img class="lace" src="assets/otherImages/laceBorder.png"> -->
-    <div class="ctaImg">
-      <!-- <div class="heading-underlined">
-        <h2 class="heading"> לתיאום פגישה</h2>
-        
-      </div> -->
-      
-      <div id="contact">
-        <h2 class="heading"> לתיאום פגישה </h2>
-        <a class="contactFont" href="tel:08-9765275" target="_blank">&#9743 08-9765275</a>
-        <a class="contactFont" href="tel:0544445194" target="_blank">&#x1F4F1 054-444-5194</a>
-        <a class="contactFont" href="mailto:calot.shsh@gmail.com" target="_blank">&#9993 calot.shsh@gmail.com</a>
-      </div>
-      
-      <!-- <form method="post" action="mailto:tink.ornitc@gmail.com">
-        <p class="contactDetail">          
-          <input class="inputBox" name="comments" maxlength="500"></input>
-          <label class="inputLabel">כתבי לנו </label>          
-        </p>        
-        <p class="contactDetail">
-          <input class="inputBox" type="email" name="email_address">
-          <label class="inputLabel">אימייל </label>
-        </p>             
-        <p class="contactDetail">
-          <input class="inputBox" type="text" name="first_name" required>
-          <label class="inputLabel">שם</label>          
-        </p>
-        <p><button class="inputButton">שליחה</button></p>
-      </form> -->
-      
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-section" id="contactID">
+    <div class="contact-inner">
+      <h2 class="contact-title">לתיאום פגישה</h2>
+      <div class="lace-divider"></div>
+      <ul class="contact-list">
+        <li>
+          <a href="tel:089765275">
+            <i class="fas fa-phone"></i>
+            08-9765275
+          </a>
+        </li>
+        <li>
+          <a href="tel:0544445194">
+            <i class="fas fa-mobile-alt"></i>
+            054-444-5194
+          </a>
+        </li>
+        <li>
+          <a href="mailto:calot.shsh@gmail.com">
+            <i class="fas fa-envelope"></i>
+            calot.shsh@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/+972544445194" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp
+          </a>
+        </li>
+      </ul>
     </div>
-    
-    
-  </section> <!-- id = contact -->
-  
-  <!-- ******************************************************how to get here******************************************************** -->
-  
-  <section id="navigationID">
-    <!-- <img class="lace" src="assets/otherImages/laceBorder.png"> -->
-    
-    <div class="heading-underlined">
-      <h2 class="heading">איך מגיעים</h2>
-      <div class="divider1"></div>
-    </div>
-    
-    <div class="navigation ">
-      <!-- 2 sub divs-->      
-      
-      <div class="instructions navins col-lg-6">
-        
-        <div class="generalAddress">
-          <h2 class="navHeadig">כתובתנו</h2>
-          <a target="_blank" href="https://www.waze.com/ul?ll=31.93223560%2C35.02314440&navigate=yes"><i class="fa-brands fa-waze iconLink" style="color: #167dc1;"></i></a>
-          <p class="address">רחוב התירוש 7 <br> יישוב חשמונאים </p>        
-        </div> <!--class generalAddress-->
-        
-        
-        
-        <div class="publicTrans">
-          <div> <h2 >הגעה בתחבורה ציבורית</h2> </div>
-          <div>          
-            <p class="publicTransInst">
-              מירושלים: 'קווים' 310, 320, 330, 340  <br>
-              מבני ברק: 'קווים' 210, 220, 240 <br>
-              יש לרדת בתחנה של צומת חשמונאים <br>
-              ולהתקדם ברגל כ-5 דק, הליכה <br>
-              לאחר הכניסה לישוב, בככר הראשונה יש לפנות ימינה <br>
-              אנחנו נמצאים בבית השלישי משמאל <br>
+  </section>
+
+  <!-- How to Get Here -->
+  <section class="directions-section" id="navigationID">
+    <div class="directions-inner">
+      <h2 class="section-title">איך מגיעים</h2>
+      <div class="lace-divider"></div>
+
+      <div class="directions-grid">
+
+        <div class="directions-info">
+          <div class="directions-address">
+            <h3 class="directions-subtitle">כתובתנו</h3>
+            <p>רחוב התירוש 7<br>יישוב חשמונאים</p>
+            <a class="waze-link" href="https://www.waze.com/ul?ll=31.93223560%2C35.02314440&navigate=yes" target="_blank">
+              <i class="fab fa-waze"></i> נווט ב-Waze
+            </a>
+          </div>
+
+          <div class="directions-transit">
+            <h3 class="directions-subtitle">הגעה בתחבורה ציבורית</h3>
+            <p class="transit-text">
+              מירושלים: 'קווים' 310, 320, 330, 340<br>
+              מבני ברק: 'קווים' 210, 220, 240<br><br>
+              יש לרדת בתחנה של צומת חשמונאים<br>
+              ולהתקדם ברגל כ-5 דק׳ הליכה<br>
+              לאחר הכניסה לישוב, בככר הראשונה יש לפנות ימינה<br>
+              אנחנו נמצאים בבית השלישי משמאל<br>
               לגשת לכניסה הימנית של הבנין ולעלות במדרגות
             </p>
           </div>
-        </div> <!--class publicTrans-->       
-        
-      </div> <!--class instructions-->
-      
-      <div class="googleMap navins col-lg-6">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3386.062471619345!2d35.02517872135333!3d31.93206123398591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502cd6912964f39%3A0xd19d46e1938529ee!2z15TXqteZ16jXldepIDcsINeX16nXnteV16DXkNeZ150!5e0!3m2!1siw!2sil!4v1572432098421!5m2!1siw!2sil"
-        allowfullscreen=""> </iframe>        
-      </div> <!--google map iframe-->
-      
-    </div> <!-- class navigation -->
-    
-    
-  </section> <!-- navigationID -->
-  <!-- ******************************************************************************************************************** -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/01361e1486.js" crossorigin="anonymous"></script>
-  
-  
+        </div>
+
+        <div class="directions-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3386.062471619345!2d35.02517872135333!3d31.93206123398591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502cd6912964f39%3A0xd19d46e1938529ee!2z15TXqteZ16jXldepIDcsINeX16nXnteV16DXkNeZ150!5e0!3m2!1siw!2sil!4v1572432098421!5m2!1siw!2sil"
+            allowfullscreen=""
+            loading="lazy"
+            title="מפת הסלון"
+          ></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var slides  = document.querySelectorAll('.carousel-slide');
+      var dots    = document.querySelectorAll('.carousel-dot');
+      var current = 0;
+      var timer;
+
+      function goTo(n) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      function startTimer() {
+        timer = setInterval(function () { goTo(current + 1); }, 5000);
+      }
+
+      window.carouselGoTo = function (n)   { goTo(n);           clearInterval(timer); startTimer(); };
+      window.carouselMove = function (dir) { goTo(current + dir); clearInterval(timer); startTimer(); };
+
+      startTimer();
+    })();
+
+    document.querySelectorAll('.nav-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.getElementById('mainNav').classList.remove('open');
+      });
+    });
+  </script>
+
+  <footer class="site-footer">
+    <div class="footer-icons">
+      <a class="footer-icon" href="https://www.waze.com/ul?ll=31.93223560%2C35.02314440&navigate=yes" target="_blank" aria-label="Waze">
+        <i class="fab fa-waze" style="color:#167dc1;"></i>
+      </a>
+      <a class="footer-icon" href="https://www.facebook.com/profile.php?id=100005709820063" target="_blank" aria-label="פייסבוק">
+        <i class="fab fa-facebook-f" style="color:#4d3ce3;"></i>
+      </a>
+      <a class="footer-icon" href="https://wa.me/+972544445194" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp" style="color:#1d8d21;"></i>
+      </a>
+      <a class="footer-icon" href="mailto:calot.shsh@gmail.com" aria-label="אימייל">
+        <i class="fas fa-envelope" style="color:#b912b6;"></i>
+      </a>
+    </div>
+    <div class="footer-logo">
+      <img src="assets/otherImages/logo.png" alt="לוגו שש וארגמן">
+    </div>
+    <p class="footer-rights">נבנה ע"י שש וארגמן &mdash; All rights reserved 2023</p>
+  </footer>
+
 </body>
-
-<footer>
-  <!-- <img class="lace" src="assets/otherImages/laceBorder.png"> -->
-  <div class="footer">    
-    <div class="footerIcons">   
-      <a target="_blank" href="https://www.waze.com/ul?ll=31.93223560%2C35.02314440&navigate=yes"><i class="fa-brands fa-waze iconLink" style="color: #167dc1;"></i></a>
-      <a target="_blank" href="https://www.facebook.com/profile.php?id=100005709820063"><i class="fa-brands fa-facebook-f iconLink" style="color: #4d3ce3;"></i></a>
-      <a target="_blank" href="https://wa.me/+972544445194" ><i class="fa-brands fa-whatsapp iconLink" style="color: #1d8d21;"></i></a>
-      <a target="_blank"><i class="fa-solid fa-envelope iconLink" style="color: #b912b6;"></i>  </a>         
-      
-    </div>
-    
-    <div class=" footer-logo">
-      <img src="assets/otherImages/logo.png" class="footerLogo" alt="logo">
-    </div>
-    <div>
-      <p class="footerRights">נבנה ע"י שש וארגמן All rights reserved 2023</p>
-    </div>
-  </div> <!---class="footer"--->
-  
-</footer>
-
 </html>
