@@ -253,6 +253,41 @@ body {
   }
 }
 
+/* ---- Shared section title ---- */
+.section-title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--black);
+  text-align: center;
+}
+
+/* ---- About ---- */
+.about-section {
+  padding: 4rem 1rem;
+  background-color: var(--bg);
+}
+
+.about-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 2.4;
+  margin-top: 1.5rem;
+  color: var(--black);
+}
+
+@media (max-width: 700px) {
+  .about-text {
+    font-size: 1rem;
+    line-height: 2.2;
+  }
+}
+
 /* ---- Contact ---- */
 .contact-section {
   background-image: url('../assets/otherImages/curtain.jpg');
