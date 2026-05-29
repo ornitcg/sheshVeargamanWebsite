@@ -95,6 +95,14 @@
     <button class="lightbox-arrow lightbox-next" onclick="lightboxMove(1); event.stopPropagation();" aria-label="הבא">
       <i class="fas fa-chevron-left"></i>
     </button>
+    <div class="lightbox-zoom-btns">
+      <button class="lightbox-zoom-btn" onclick="zoomOut(); event.stopPropagation();" aria-label="הקטן">
+        <i class="fas fa-minus"></i>
+      </button>
+      <button class="lightbox-zoom-btn" onclick="zoomIn(); event.stopPropagation();" aria-label="הגדל">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
   </div>
 
   <footer class="site-footer">
@@ -119,48 +127,7 @@
   </footer>
 
   <script src="scripts/navbar.js"></script>
-  <script>
-    var images = [];
-    document.querySelectorAll('.gallery-item img').forEach(function (img) {
-      images.push(img.src);
-    });
-
-    var currentLightbox = 0;
-
-    function openLightbox(index) {
-      currentLightbox = index;
-      document.getElementById('lightboxImg').src = images[index];
-      document.getElementById('lightbox').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    function closeLightboxOnBackdrop(e) {
-      if (e.target === document.getElementById('lightbox')) closeLightbox();
-    }
-
-    function lightboxMove(dir) {
-      currentLightbox = (currentLightbox + dir + images.length) % images.length;
-      document.getElementById('lightboxImg').src = images[currentLightbox];
-    }
-
-    document.querySelectorAll('.nav-link').forEach(function (link) {
-      link.addEventListener('click', function () {
-        document.getElementById('mainNav').classList.remove('open');
-      });
-    });
-
-    document.addEventListener('keydown', function (e) {
-      if (!document.getElementById('lightbox').classList.contains('open')) return;
-      if (e.key === 'Escape')      closeLightbox();
-      if (e.key === 'ArrowRight')  lightboxMove(-1);
-      if (e.key === 'ArrowLeft')   lightboxMove(1);
-    });
-  </script>
+  <script src="scripts/lightbox.js"></script>
 
 </body>
 </html>
