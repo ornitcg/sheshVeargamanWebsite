@@ -1,0 +1,254 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink:       #F3DAD8;
+  --pink-dark:  #c9a09a;
+  --pink-light: #fdf4f3;
+  --black:      #1a1a1a;
+  --bg:         #fffcfc;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Varela Round', sans-serif;
+  color: var(--black);
+}
+
+/* ---- Header ---- */
+.site-header {
+  text-align: center;
+  padding: 2.5rem 1rem 0.5rem;
+}
+
+.site-title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 5.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.site-subtitle {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.2rem;
+  color: var(--pink-dark);
+  margin-top: 0.2rem;
+}
+
+.lace-divider {
+  height: 28px;
+  background-image: url('../assets/otherImages/divider1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 1rem 0 0;
+}
+
+/* ---- Navbar ---- */
+.navbar {
+  background-color: #fff;
+  border-top: 1px solid var(--pink);
+  border-bottom: 1px solid var(--pink);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0.75rem 2rem;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  color: var(--black);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+  border-bottom-color: var(--pink-dark);
+  color: var(--pink-dark);
+}
+
+.nav-whatsapp {
+  font-size: 1.7rem;
+  color: #1d8d21;
+  border-bottom: none;
+  line-height: 1;
+}
+
+.nav-whatsapp:hover {
+  color: #1d8d21;
+  border-bottom: none;
+  opacity: 0.8;
+}
+
+/* ---- Hamburger button (hidden on desktop) ---- */
+.hamburger-btn {
+  display: none;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.9rem 1.2rem;
+  text-align: right;
+  font-size: 1.4rem;
+  color: var(--black);
+}
+
+/* toggle icons */
+.icon-close { display: none; }
+
+.navbar.open .icon-open  { display: none; }
+.navbar.open .icon-close { display: inline-block; }
+
+/* ---- Mobile ---- */
+@media (max-width: 700px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+  }
+
+  .navbar.open .nav-list {
+    display: flex;
+  }
+
+  .nav-list li {
+    border-bottom: 1px solid var(--pink-light);
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.15rem;
+    border-bottom: none;
+    text-align: right;
+  }
+
+  .nav-link:hover {
+    background-color: var(--pink-light);
+    border-bottom: none;
+    color: var(--black);
+  }
+
+  .nav-whatsapp {
+    display: block;
+    padding: 0.85rem 1.5rem;
+  }
+
+  .site-title    { font-size: 3.8rem; }
+  .site-subtitle { font-size: 1.7rem; }
+}
+
+/* ---- Hero Carousel ---- */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 88vh;
+  overflow: hidden;
+  background-color: var(--black);
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Arrows — in RTL: prev sits on the right, next on the left */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.carousel-arrow.prev { right: 1.2rem; }
+.carousel-arrow.next { left:  1.2rem; }
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carousel-dot.active {
+  background: #fff;
+  transform: scale(1.25);
+}
+
+@media (max-width: 700px) {
+  .hero-carousel {
+    height: 60vw;
+    min-height: 220px;
+  }
+
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+}
