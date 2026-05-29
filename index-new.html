@@ -170,6 +170,100 @@
       .site-title    { font-size: 3.8rem; }
       .site-subtitle { font-size: 1.7rem; }
     }
+
+    /* ---- Hero Carousel ---- */
+    .hero-carousel {
+      position: relative;
+      width: 100%;
+      height: 88vh;
+      overflow: hidden;
+      background-color: var(--black);
+    }
+
+    .carousel-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* Arrows — in RTL: prev sits on the right, next on the left */
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.35);
+      border: none;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1rem;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .carousel-arrow:hover {
+      background: rgba(255, 255, 255, 0.65);
+    }
+
+    .carousel-arrow.prev { right: 1.2rem; }
+    .carousel-arrow.next { left:  1.2rem; }
+
+    /* Dots */
+    .carousel-dots {
+      position: absolute;
+      bottom: 1.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .carousel-dot.active {
+      background: #fff;
+      transform: scale(1.25);
+    }
+
+    @media (max-width: 700px) {
+      .hero-carousel {
+        height: 60vw;
+        min-height: 220px;
+      }
+
+      .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+      }
+    }
   </style>
 </head>
 
@@ -207,6 +301,60 @@
     </ul>
 
   </nav>
+
+  <!-- Hero Carousel -->
+  <section class="hero-carousel">
+
+    <div class="carousel-slide active">
+      <img src="assets/otherImages/rr.jpg" alt="שש וארגמן">
+    </div>
+    <div class="carousel-slide">
+      <img src="assets/ourBrides/1.jpg" alt="הכלות שלנו">
+    </div>
+    <div class="carousel-slide">
+      <img src="assets/ourBrides/22.jpg" alt="הכלות שלנו">
+    </div>
+
+    <button class="carousel-arrow prev" aria-label="הקודם" onclick="carouselMove(-1)">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <button class="carousel-arrow next" aria-label="הבא" onclick="carouselMove(1)">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="carousel-dots">
+      <button class="carousel-dot active" onclick="carouselGoTo(0)" aria-label="תמונה 1"></button>
+      <button class="carousel-dot"        onclick="carouselGoTo(1)" aria-label="תמונה 2"></button>
+      <button class="carousel-dot"        onclick="carouselGoTo(2)" aria-label="תמונה 3"></button>
+    </div>
+
+  </section>
+
+  <script>
+    (function () {
+      var slides  = document.querySelectorAll('.carousel-slide');
+      var dots    = document.querySelectorAll('.carousel-dot');
+      var current = 0;
+      var timer;
+
+      function goTo(n) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      function startTimer() {
+        timer = setInterval(function () { goTo(current + 1); }, 5000);
+      }
+
+      window.carouselGoTo = function (n)   { goTo(n);           clearInterval(timer); startTimer(); };
+      window.carouselMove = function (dir) { goTo(current + dir); clearInterval(timer); startTimer(); };
+
+      startTimer();
+    })();
+  </script>
 
 </body>
 </html>
