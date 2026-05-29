@@ -252,3 +252,74 @@ body {
     font-size: 0.85rem;
   }
 }
+
+/* ---- Contact ---- */
+.contact-section {
+  background-image: url('../assets/otherImages/curtain.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+/* background-attachment: fixed breaks on iOS — disable it on mobile */
+@media (max-width: 700px) {
+  .contact-section {
+    background-attachment: scroll;
+  }
+}
+
+.contact-inner {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--pink);
+  padding: 2.5rem 3.5rem;
+  border-radius: 2px;
+}
+
+.contact-title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-list a {
+  font-size: 1.5rem;
+  color: var(--black);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  transition: color 0.2s;
+}
+
+.contact-list a:hover {
+  color: var(--pink-dark);
+}
+
+.contact-list .fa-whatsapp {
+  color: #1d8d21;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 700px) {
+  .contact-inner {
+    padding: 2rem 1.5rem;
+    width: 100%;
+  }
+
+  .contact-list a {
+    font-size: 1.2rem;
+  }
+}
