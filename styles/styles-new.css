@@ -396,6 +396,125 @@ body {
   }
 }
 
+/* ---- Gallery ---- */
+.gallery-section {
+  padding: 4rem 1rem;
+  background-color: var(--bg);
+}
+
+.gallery-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.masonry-gallery {
+  columns: 3;
+  column-gap: 14px;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 14px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s, opacity 0.3s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+  opacity: 0.88;
+}
+
+@media (max-width: 900px) {
+  .masonry-gallery { columns: 2; }
+}
+
+@media (max-width: 500px) {
+  .masonry-gallery { columns: 1; }
+}
+
+/* ---- Lightbox ---- */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 2px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+  line-height: 1;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.lightbox-arrow:hover { background: rgba(255, 255, 255, 0.3); }
+
+/* RTL: prev on the right, next on the left */
+.lightbox-prev { right: 1.2rem; }
+.lightbox-next { left:  1.2rem; }
+
+@media (max-width: 700px) {
+  .lightbox-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .lightbox-prev { right: 0.5rem; }
+  .lightbox-next { left:  0.5rem; }
+}
+
 /* ---- Footer ---- */
 .site-footer {
   background-color: var(--pink);

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>הכלות שלנו — שש וארגמן</title>
+  <link rel="icon" href="icons/LogoIcon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Varela+Round&display=swap&subset=hebrew" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles-new.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <h1 class="site-title">שש וארגמן</h1>
+    <p class="site-subtitle">שמלות כלה בחשמונאים</p>
+    <div class="lace-divider"></div>
+  </header>
+
+  <nav class="navbar" id="mainNav">
+    <button
+      class="hamburger-btn"
+      aria-label="פתח תפריט"
+      onclick="
+        var nav = document.getElementById('mainNav');
+        nav.classList.toggle('open');
+        this.setAttribute('aria-label', nav.classList.contains('open') ? 'סגור תפריט' : 'פתח תפריט');
+      "
+    >
+      <i class="fas fa-bars  icon-open"></i>
+      <i class="fas fa-times icon-close"></i>
+    </button>
+
+    <ul class="nav-list">
+      <li><a class="nav-link" href="index-new.html#ourStoryID">מי אנחנו</a></li>
+      <li><a class="nav-link" href="our-brides-new.html">הכלות שלנו</a></li>
+      <li><a class="nav-link" href="http://www.calot.net/" target="_blank">לאתר הישן</a></li>
+      <li><a class="nav-link" href="index-new.html#navigationID">איך מגיעים</a></li>
+      <li><a class="nav-link" href="index-new.html#contactID">צרו קשר</a></li>
+      <li><a class="nav-link" href="tel:0544445194">054-4445194</a></li>
+      <li><a class="nav-link nav-whatsapp fab fa-whatsapp" href="https://wa.me/+972544445194" target="_blank" aria-label="WhatsApp"></a></li>
+    </ul>
+  </nav>
+
+  <!-- Gallery -->
+  <section class="gallery-section">
+    <div class="gallery-inner">
+      <h2 class="section-title">הכלות שלנו</h2>
+      <div class="lace-divider"></div>
+      <div class="masonry-gallery">
+        <div class="gallery-item" onclick="openLightbox(0)"><img src="assets/ourBrides/1.jpg"  alt="כלה 1"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(1)"><img src="assets/ourBrides/2.jpg"  alt="כלה 2"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(2)"><img src="assets/ourBrides/3.jpg"  alt="כלה 3"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(3)"><img src="assets/ourBrides/4.jpg"  alt="כלה 4"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(4)"><img src="assets/ourBrides/5.jpg"  alt="כלה 5"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(5)"><img src="assets/ourBrides/6.jpg"  alt="כלה 6"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(6)"><img src="assets/ourBrides/7.jpg"  alt="כלה 7"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(7)"><img src="assets/ourBrides/8.jpg"  alt="כלה 8"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(8)"><img src="assets/ourBrides/9.jpg"  alt="כלה 9"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(9)"><img src="assets/ourBrides/10.jpg" alt="כלה 10" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(10)"><img src="assets/ourBrides/11.jpg" alt="כלה 11" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(11)"><img src="assets/ourBrides/12.jpg" alt="כלה 12" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(12)"><img src="assets/ourBrides/13.jpg" alt="כלה 13" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(13)"><img src="assets/ourBrides/14.jpg" alt="כלה 14" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(14)"><img src="assets/ourBrides/15.jpg" alt="כלה 15" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(15)"><img src="assets/ourBrides/16.jpg" alt="כלה 16" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(16)"><img src="assets/ourBrides/17.jpg" alt="כלה 17" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(17)"><img src="assets/ourBrides/18.jpg" alt="כלה 18" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(18)"><img src="assets/ourBrides/19.jpg" alt="כלה 19" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(19)"><img src="assets/ourBrides/20.jpg" alt="כלה 20" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(20)"><img src="assets/ourBrides/21.jpg" alt="כלה 21" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(21)"><img src="assets/ourBrides/22.jpg" alt="כלה 22" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(22)"><img src="assets/ourBrides/23.jpg" alt="כלה 23" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(23)"><img src="assets/ourBrides/24.jpg" alt="כלה 24" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(24)"><img src="assets/ourBrides/25.jpg" alt="כלה 25" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(25)"><img src="assets/ourBrides/26.jpg" alt="כלה 26" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(26)"><img src="assets/ourBrides/27.jpg" alt="כלה 27" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(27)"><img src="assets/ourBrides/28.jpg" alt="כלה 28" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(28)"><img src="assets/ourBrides/29.jpg" alt="כלה 29" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox" id="lightbox" onclick="closeLightboxOnBackdrop(event)">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="סגור">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-arrow lightbox-prev" onclick="lightboxMove(-1); event.stopPropagation();" aria-label="הקודם">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="תמונת כלה">
+    <button class="lightbox-arrow lightbox-next" onclick="lightboxMove(1); event.stopPropagation();" aria-label="הבא">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-icons">
+      <a class="footer-icon" href="https://www.waze.com/ul?ll=31.93223560%2C35.02314440&navigate=yes" target="_blank" aria-label="Waze">
+        <i class="fab fa-waze" style="color:#167dc1;"></i>
+      </a>
+      <a class="footer-icon" href="https://www.facebook.com/profile.php?id=100005709820063" target="_blank" aria-label="פייסבוק">
+        <i class="fab fa-facebook-f" style="color:#4d3ce3;"></i>
+      </a>
+      <a class="footer-icon" href="https://wa.me/+972544445194" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp" style="color:#1d8d21;"></i>
+      </a>
+      <a class="footer-icon" href="mailto:calot.shsh@gmail.com" aria-label="אימייל">
+        <i class="fas fa-envelope" style="color:#b912b6;"></i>
+      </a>
+    </div>
+    <div class="footer-logo">
+      <img src="assets/otherImages/logo.png" alt="לוגו שש וארגמן">
+    </div>
+    <p class="footer-rights">נבנה ע"י שש וארגמן &mdash; All rights reserved 2023</p>
+  </footer>
+
+  <script>
+    var images = [];
+    document.querySelectorAll('.gallery-item img').forEach(function (img) {
+      images.push(img.src);
+    });
+
+    var currentLightbox = 0;
+
+    function openLightbox(index) {
+      currentLightbox = index;
+      document.getElementById('lightboxImg').src = images[index];
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeLightboxOnBackdrop(e) {
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    }
+
+    function lightboxMove(dir) {
+      currentLightbox = (currentLightbox + dir + images.length) % images.length;
+      document.getElementById('lightboxImg').src = images[currentLightbox];
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (!document.getElementById('lightbox').classList.contains('open')) return;
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === 'ArrowRight')  lightboxMove(-1);
+      if (e.key === 'ArrowLeft')   lightboxMove(1);
+    });
+  </script>
+
+</body>
+</html>
