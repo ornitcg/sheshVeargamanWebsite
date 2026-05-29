@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שש וארגמן — שמלות כלה בחשמונאים</title>
+  <link rel="icon" href="icons/LogoIcon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Varela+Round&display=swap&subset=hebrew" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --pink:       #F3DAD8;
+      --pink-dark:  #c9a09a;
+      --pink-light: #fdf4f3;
+      --black:      #1a1a1a;
+      --bg:         #fffcfc;
+    }
+
+    body {
+      background-color: var(--bg);
+      font-family: 'Varela Round', sans-serif;
+      color: var(--black);
+    }
+
+    /* ---- Header ---- */
+    .site-header {
+      text-align: center;
+      padding: 2.5rem 1rem 0.5rem;
+    }
+
+    .site-title {
+      font-family: 'Amatic SC', cursive;
+      font-size: 5.5rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+
+    .site-subtitle {
+      font-family: 'Amatic SC', cursive;
+      font-size: 2.2rem;
+      color: var(--pink-dark);
+      margin-top: 0.2rem;
+    }
+
+    .lace-divider {
+      height: 28px;
+      background-image: url('assets/otherImages/divider1.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin: 1rem 0 0;
+    }
+
+    /* ---- Navbar ---- */
+    .navbar {
+      background-color: #fff;
+      border-top: 1px solid var(--pink);
+      border-bottom: 1px solid var(--pink);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 0.75rem 2rem;
+    }
+
+    .nav-link {
+      font-size: 1.1rem;
+      color: var(--black);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-link:hover {
+      border-bottom-color: var(--pink-dark);
+      color: var(--pink-dark);
+    }
+
+    .nav-whatsapp {
+      font-size: 1.7rem;
+      color: #1d8d21;
+      border-bottom: none;
+      line-height: 1;
+    }
+
+    .nav-whatsapp:hover {
+      color: #1d8d21;
+      border-bottom: none;
+      opacity: 0.8;
+    }
+
+    /* ---- Hamburger button (hidden on desktop) ---- */
+    .hamburger-btn {
+      display: none;
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.9rem 1.2rem;
+      text-align: right;
+      font-size: 1.4rem;
+      color: var(--black);
+    }
+
+    /* toggle icons */
+    .icon-close { display: none; }
+
+    .navbar.open .icon-open  { display: none; }
+    .navbar.open .icon-close { display: inline-block; }
+
+    /* ---- Mobile ---- */
+    @media (max-width: 700px) {
+      .hamburger-btn {
+        display: block;
+      }
+
+      .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0;
+      }
+
+      .navbar.open .nav-list {
+        display: flex;
+      }
+
+      .nav-list li {
+        border-bottom: 1px solid var(--pink-light);
+      }
+
+      .nav-link {
+        display: block;
+        padding: 0.9rem 1.5rem;
+        font-size: 1.15rem;
+        border-bottom: none;
+        text-align: right;
+      }
+
+      .nav-link:hover {
+        background-color: var(--pink-light);
+        border-bottom: none;
+        color: var(--black);
+      }
+
+      .nav-whatsapp {
+        display: block;
+        padding: 0.85rem 1.5rem;
+      }
+
+      .site-title    { font-size: 3.8rem; }
+      .site-subtitle { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <h1 class="site-title">שש וארגמן</h1>
+    <p class="site-subtitle">שמלות כלה בחשמונאים</p>
+    <div class="lace-divider"></div>
+  </header>
+
+  <nav class="navbar" id="mainNav">
+
+    <button
+      class="hamburger-btn"
+      aria-label="פתח תפריט"
+      onclick="
+        var nav = document.getElementById('mainNav');
+        nav.classList.toggle('open');
+        this.setAttribute('aria-label', nav.classList.contains('open') ? 'סגור תפריט' : 'פתח תפריט');
+      "
+    >
+      <i class="fas fa-bars  icon-open"></i>
+      <i class="fas fa-times icon-close"></i>
+    </button>
+
+    <ul class="nav-list">
+      <li><a class="nav-link" href="#ourStoryID">מי אנחנו</a></li>
+      <li><a class="nav-link" href="ourBrides.html" target="_blank">הכלות שלנו</a></li>
+      <li><a class="nav-link" href="http://www.calot.net/" target="_blank">לאתר הישן</a></li>
+      <li><a class="nav-link" href="#navigationID">איך מגיעים</a></li>
+      <li><a class="nav-link" href="#contactID">צרו קשר</a></li>
+      <li><a class="nav-link" href="tel:0544445194">054-4445194</a></li>
+      <li><a class="nav-link nav-whatsapp fab fa-whatsapp" href="https://wa.me/+972544445194" target="_blank" aria-label="WhatsApp"></a></li>
+    </ul>
+
+  </nav>
+
+</body>
+</html>
