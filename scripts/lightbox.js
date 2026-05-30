@@ -133,18 +133,25 @@
   });
 
   // ---- Open / close / navigate ----
+  var lastFocusedElement = null;
+
   window.openLightbox = function (index) {
     currentIndex = index;
     resetZoom();
     img().src = images[index];
     overlay().classList.add('open');
     document.body.style.overflow = 'hidden';
+    lastFocusedElement = document.activeElement;
+    // Move focus into lightbox
+    overlay().querySelector('.lightbox-close').focus();
   };
 
   window.closeLightbox = function () {
     overlay().classList.remove('open');
     document.body.style.overflow = '';
     resetZoom();
+    // Return focus to the triggering element
+    if (lastFocusedElement) lastFocusedElement.focus();
   };
 
   window.closeLightboxOnBackdrop = function (e) {
@@ -157,6 +164,19 @@
     img().src = images[currentIndex];
   };
 
+  // ---- Focus trap inside lightbox ----
+  overlay().addEventListener('keydown', function (e) {
+    if (e.key !== 'Tab') return;
+    var focusable = Array.from(overlay().querySelectorAll('button'));
+    var first = focusable[0];
+    var last  = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+    }
+  });
+
   // ---- Keyboard ----
   document.addEventListener('keydown', function (e) {
     if (!overlay().classList.contains('open')) return;
@@ -165,6 +185,19 @@
     if (e.key === 'ArrowLeft')   window.lightboxMove(1);
     if (e.key === '+')           window.zoomIn();
     if (e.key === '-')           window.zoomOut();
+  });
+
+  // ---- Gallery keyboard accessibility ----
+  document.querySelectorAll('.gallery-item').forEach(function (item, i) {
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'button');
+    item.setAttribute('aria-label', 'פתח תמונה ' + (i + 1));
+    item.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        window.openLightbox(i);
+      }
+    });
   });
 
   // ---- Close hamburger on nav link click ----

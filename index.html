@@ -13,6 +13,8 @@
 
 <body>
 
+  <a class="skip-link" href="#main-content">דלג לתוכן הראשי</a>
+
   <header class="site-header">
     <h1 class="site-title">שש וארגמן</h1>
     <p class="site-subtitle">שמלות כלה בחשמונאים</p>
@@ -47,7 +49,7 @@
   </nav>
 
   <!-- Hero Carousel -->
-  <section class="hero-carousel">
+  <section class="hero-carousel" id="main-content">
 
     <div class="carousel-slide active">
       <img src="assets/otherImages/rr.jpg" alt="שש וארגמן">
@@ -71,6 +73,10 @@
       <button class="carousel-dot"        onclick="carouselGoTo(1)" aria-label="תמונה 2"></button>
       <button class="carousel-dot"        onclick="carouselGoTo(2)" aria-label="תמונה 3"></button>
     </div>
+
+    <button class="carousel-pause" id="carouselPause" onclick="toggleCarouselPause()" aria-label="עצור גלריה">
+      <i class="fas fa-pause"></i>
+    </button>
 
   </section>
 
@@ -182,6 +188,7 @@
       var dots    = document.querySelectorAll('.carousel-dot');
       var current = 0;
       var timer;
+      var paused  = false;
 
       function goTo(n) {
         slides[current].classList.remove('active');
@@ -192,11 +199,26 @@
       }
 
       function startTimer() {
+        clearInterval(timer);
         timer = setInterval(function () { goTo(current + 1); }, 5000);
       }
 
-      window.carouselGoTo = function (n)   { goTo(n);           clearInterval(timer); startTimer(); };
-      window.carouselMove = function (dir) { goTo(current + dir); clearInterval(timer); startTimer(); };
+      window.carouselGoTo = function (n)   { goTo(n);             if (!paused) { clearInterval(timer); startTimer(); } };
+      window.carouselMove = function (dir) { goTo(current + dir); if (!paused) { clearInterval(timer); startTimer(); } };
+
+      window.toggleCarouselPause = function () {
+        paused = !paused;
+        var btn = document.getElementById('carouselPause');
+        if (paused) {
+          clearInterval(timer);
+          btn.setAttribute('aria-label', 'המשך גלריה');
+          btn.querySelector('i').className = 'fas fa-play';
+        } else {
+          startTimer();
+          btn.setAttribute('aria-label', 'עצור גלריה');
+          btn.querySelector('i').className = 'fas fa-pause';
+        }
+      };
 
       startTimer();
     })();
@@ -227,6 +249,7 @@
       <img src="assets/otherImages/logo.png" alt="לוגו שש וארגמן">
     </div>
     <p class="footer-rights">נבנה ע"י שש וארגמן &mdash; All rights reserved 2023</p>
+    <p class="footer-a11y">אתר זה עוצב תוך שמירה על עקרונות נגישות. לתמיכה <a href="mailto:calot.shsh@gmail.com">צרו קשר</a>.</p>
   </footer>
 
 </body>

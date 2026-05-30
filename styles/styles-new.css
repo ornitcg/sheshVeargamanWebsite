@@ -6,10 +6,44 @@
 
 :root {
   --pink:       #F3DAD8;
-  --pink-dark:  #c9a09a;
+  --pink-dark:  #8b5555;   /* darkened for WCAG AA contrast (was #c9a09a) */
   --pink-light: #fdf4f3;
   --black:      #1a1a1a;
   --bg:         #fffcfc;
+}
+
+/* ---- Skip to content ---- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--black);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  z-index: 9999;
+  transition: top 0.2s;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ---- Focus visible (keyboard navigation) ---- */
+:focus-visible {
+  outline: 2px solid var(--pink-dark);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 body {
@@ -217,6 +251,30 @@ body {
 
 .carousel-arrow.prev { right: 1.2rem; }
 .carousel-arrow.next { left:  1.2rem; }
+
+/* Carousel pause button */
+.carousel-pause {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.35);
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.carousel-pause:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
 
 /* Dots */
 .carousel-dots {
@@ -589,6 +647,17 @@ body {
   font-size: 0.85rem;
   color: var(--black);
   opacity: 0.7;
+}
+
+.footer-a11y {
+  font-size: 0.8rem;
+  color: var(--black);
+  opacity: 0.65;
+}
+
+.footer-a11y a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .contact-inner {
