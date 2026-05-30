@@ -660,6 +660,82 @@ body {
   text-decoration: underline;
 }
 
+/* ---- Accessibility page ---- */
+.a11y-page {
+  padding: 4rem 1rem;
+  background-color: var(--bg);
+}
+
+.a11y-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.a11y-section {
+  margin-top: 2.5rem;
+}
+
+.a11y-heading {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.7rem;
+}
+
+.a11y-page p,
+.a11y-list li,
+.a11y-contact-list li {
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.a11y-list,
+.a11y-contact-list {
+  list-style: none;
+  padding-right: 0.5rem;
+}
+
+.a11y-list li::before {
+  content: "✓ ";
+  color: var(--pink-dark);
+  font-weight: bold;
+}
+
+.a11y-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.a11y-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.a11y-contact-list a {
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1px solid var(--pink);
+  transition: border-color 0.2s;
+}
+
+.a11y-contact-list a:hover {
+  border-bottom-color: var(--pink-dark);
+}
+
+.a11y-response {
+  margin-top: 0.8rem;
+  font-style: italic;
+}
+
+.a11y-page a {
+  color: var(--black);
+  text-decoration: underline;
+}
+
 .contact-inner {
   display: inline-block;
   background: rgba(255, 255, 255, 0.88);
