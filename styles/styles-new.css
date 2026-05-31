@@ -699,9 +699,6 @@ body {
   .masonry-gallery { columns: 2; }
 }
 
-@media (max-width: 500px) {
-  .masonry-gallery { columns: 1; }
-}
 
 /* ---- Lightbox ---- */
 .lightbox {
