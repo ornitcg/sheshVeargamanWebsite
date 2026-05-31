@@ -897,6 +897,10 @@ body {
   font-weight: bold;
 }
 
+.a11y-list--plain li::before {
+  content: none;
+}
+
 .a11y-contact-list {
   display: flex;
   flex-direction: column;
