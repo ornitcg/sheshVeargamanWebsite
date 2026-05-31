@@ -53,7 +53,7 @@
       <div class="faq-list">
 
         <details class="faq-item">
-          <summary class="faq-question">כמה עולה להשכיר שמלת כלה?</summary>
+          <summary class="faq-question">כמה עולה לשכור שמלת כלה?</summary>
           <p class="faq-answer">עלות השכרת שמלת כלה אצלנו היא בין 2500-6000 ש"ח. שמלות הכלה אצלנו מתחלקות ל-3 קטגוריות: תפירת שמלה חדשה בעיצוב אישי, קולקציה מוכנה חדשה, וקולקציית שמלות מוכנות שנלבשו עד 3 פעמים. המחיר כולל שמלת כלה, הינומה, תחתית, תיקונים והתאמות, גיהוץ וניקוי.</p>
         </details>
 
@@ -84,7 +84,9 @@
 
         <details class="faq-item">
           <summary class="faq-question">מצאתי שמלה אך רוצה לשנות בה דברים?</summary>
-          <p class="faq-answer">בשמחה! מחיר השמלה כולל תיקונים ושינויים כגון: שינוי מפתח צוואר, החלפה/הצרה/קיצור שרוולים, שינוי חגורה, שינוי אורך ועוד.</p>
+          <p class="faq-answer">בשמחה! מחיר ההשאלה כולל תיקונים ושינויים קטנים, כמו שינוי במפתח הצוואר, הצרה או קיצור שרוולים, שינוי חגורה ושינויי אורך.
+
+במקרה שנדרשים שינויים משמעותיים יותר, תינתן הצעת מחיר נפרדת לאחר בדיקה והבנה של היקף השינויים.</p>
         </details>
 
         <details class="faq-item">
@@ -128,6 +130,23 @@
     document.querySelectorAll('.nav-link').forEach(function (link) {
       link.addEventListener('click', function () {
         document.getElementById('mainNav').classList.remove('open');
+      });
+    });
+
+    document.querySelectorAll('.faq-item').forEach(function (details) {
+      var summary = details.querySelector('.faq-question');
+      var answer  = details.querySelector('.faq-answer');
+
+      answer.setAttribute('tabindex', '-1');
+      summary.setAttribute('aria-expanded', 'false');
+
+      details.addEventListener('toggle', function () {
+        if (details.open) {
+          summary.setAttribute('aria-expanded', 'true');
+          answer.focus();
+        } else {
+          summary.setAttribute('aria-expanded', 'false');
+        }
       });
     });
   </script>
