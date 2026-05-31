@@ -68,7 +68,7 @@
         </details>
 
         <details class="faq-item">
-          <summary class="faq-question">מתי מקבלים את השמלה?</summary>
+          <summary class="faq-question">מתי אקבל את השמלה?</summary>
           <p class="faq-answer">כשבוע לפני החתונה.</p>
         </details>
 
@@ -140,14 +140,43 @@
       answer.setAttribute('tabindex', '-1');
       summary.setAttribute('aria-expanded', 'false');
 
-      details.addEventListener('toggle', function () {
+      // Keyboard: take full control so Tab order stays predictable
+      summary.addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        e.preventDefault();
         if (details.open) {
-          summary.setAttribute('aria-expanded', 'true');
-          answer.focus();
-        } else {
+          details.open = false;
           summary.setAttribute('aria-expanded', 'false');
+          answer.setAttribute('tabindex', '-1');
+        } else {
+          details.open = true;
+          summary.setAttribute('aria-expanded', 'true');
+          answer.setAttribute('tabindex', '0');
+          answer.focus();
         }
       });
+
+      // Escape on answer: close and return focus to the question
+      answer.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        details.open = false;
+        summary.setAttribute('aria-expanded', 'false');
+        answer.setAttribute('tabindex', '-1');
+        summary.focus();
+      });
+
+      // Mouse click: browser already toggled details.open before click fires
+      summary.addEventListener('click', function () {
+        summary.setAttribute('aria-expanded', details.open ? 'true' : 'false');
+        answer.setAttribute('tabindex', details.open ? '0' : '-1');
+      });
+
+      // Add Esc hint after the answer
+      var hint = document.createElement('p');
+      hint.className = 'faq-esc-hint';
+      hint.setAttribute('aria-hidden', 'true');
+      hint.innerHTML = '<kbd>Esc</kbd> לסגירה';
+      details.appendChild(hint);
     });
   </script>
 
