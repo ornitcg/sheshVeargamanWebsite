@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>שש וארגמן — שמלות כלה בחשמונאים</title>
+  <title>Shesh Ve'argaman — Bridal Gowns in Hashmonaim</title>
   <link rel="icon" href="icons/LogoIcon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Varela+Round&display=swap&subset=hebrew" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles-new.css">
 </head>
 
 <body>
 
-  <a class="skip-link" href="#main-content">דלג לתוכן הראשי</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <header class="site-header">
-    <h1 class="site-title">שש וארגמן</h1>
-    <p class="site-subtitle">שמלות כלה בחשמונאים</p>
+    <h1 class="site-title">Shesh Ve'argaman</h1>
+    <p class="site-subtitle">Bridal Gowns in Hashmonaim</p>
     <div class="lace-divider"></div>
   </header>
 
@@ -25,11 +26,11 @@
 
     <button
       class="hamburger-btn"
-      aria-label="פתח תפריט"
+      aria-label="Open menu"
       onclick="
         var nav = document.getElementById('mainNav');
         nav.classList.toggle('open');
-        this.setAttribute('aria-label', nav.classList.contains('open') ? 'סגור תפריט' : 'פתח תפריט');
+        this.setAttribute('aria-label', nav.classList.contains('open') ? 'Close menu' : 'Open menu');
       "
     >
       <i class="fas fa-bars  icon-open"></i>
@@ -37,17 +38,16 @@
     </button>
 
     <ul class="nav-list">
-      <li><a class="nav-link" href="#ourStoryID">מי אנחנו</a></li>
-      <li><a class="nav-link" href="ourBrides.html">הכלות שלנו</a></li>
-      <li><a class="nav-link" href="faq.html">שאלות נפוצות</a></li>
-      <li><a class="nav-link" href="#navigationID">איך מגיעים</a></li>
-      <li><a class="nav-link" href="http://www.calot.net/" target="_blank">לאתר הישן</a></li>
-      <li><a class="nav-link" href="#contactID">צרו קשר</a></li>
+      <li><a class="nav-link" href="#ourStoryID">About Us</a></li>
+      <li><a class="nav-link" href="ourBrides-en.html">Our Brides</a></li>
+      <li><a class="nav-link" href="faq-en.html">FAQ</a></li>
+      <li><a class="nav-link" href="#navigationID">Directions</a></li>
+      <li><a class="nav-link" href="#contactID">Contact</a></li>
       <li><a class="nav-link" href="tel:0544445194">054-4445194</a></li>
       <li><a class="nav-link nav-whatsapp fab fa-whatsapp" href="https://wa.me/+972544445194" target="_blank" aria-label="WhatsApp"></a></li>
       <li class="nav-lang">
-        <a class="nav-lang-btn active" href="index.html" aria-label="גרסה בעברית">עב</a>
-        <a class="nav-lang-btn" href="index-en.html" aria-label="English version">EN</a>
+        <a class="nav-lang-btn" href="index.html" aria-label="Hebrew version">עב</a>
+        <a class="nav-lang-btn active" href="index-en.html" aria-label="English version">EN</a>
       </li>
     </ul>
 
@@ -57,29 +57,29 @@
   <section class="hero-carousel" id="main-content">
 
     <div class="carousel-slide active">
-      <img src="assets/otherImages/rr.jpg" alt="שש וארגמן">
+      <img src="assets/otherImages/rr.jpg" alt="Shesh Ve'argaman Bridal Salon">
     </div>
     <div class="carousel-slide">
-      <img src="assets/ourBrides/1.jpg" alt="הכלות שלנו">
+      <img src="assets/ourBrides/1.jpg" alt="Our Brides">
     </div>
     <div class="carousel-slide">
-      <img src="assets/ourBrides/22.jpg" alt="הכלות שלנו">
+      <img src="assets/ourBrides/22.jpg" alt="Our Brides">
     </div>
 
-    <button class="carousel-arrow prev" aria-label="הקודם" onclick="carouselMove(-1)">
+    <button class="carousel-arrow prev" aria-label="Previous" onclick="carouselMove(-1)">
       <i class="fas fa-chevron-right"></i>
     </button>
-    <button class="carousel-arrow next" aria-label="הבא" onclick="carouselMove(1)">
+    <button class="carousel-arrow next" aria-label="Next" onclick="carouselMove(1)">
       <i class="fas fa-chevron-left"></i>
     </button>
 
     <div class="carousel-dots">
-      <button class="carousel-dot active" onclick="carouselGoTo(0)" aria-label="תמונה 1"></button>
-      <button class="carousel-dot"        onclick="carouselGoTo(1)" aria-label="תמונה 2"></button>
-      <button class="carousel-dot"        onclick="carouselGoTo(2)" aria-label="תמונה 3"></button>
+      <button class="carousel-dot active" onclick="carouselGoTo(0)" aria-label="Image 1"></button>
+      <button class="carousel-dot"        onclick="carouselGoTo(1)" aria-label="Image 2"></button>
+      <button class="carousel-dot"        onclick="carouselGoTo(2)" aria-label="Image 3"></button>
     </div>
 
-    <button class="carousel-pause" id="carouselPause" onclick="toggleCarouselPause()" aria-label="עצור גלריה">
+    <button class="carousel-pause" id="carouselPause" onclick="toggleCarouselPause()" aria-label="Pause slideshow">
       <i class="fas fa-pause"></i>
     </button>
 
@@ -88,22 +88,18 @@
   <!-- About Us -->
   <section class="about-section" id="ourStoryID">
     <div class="about-inner">
-      <h2 class="section-title">מי אנחנו</h2>
+      <h2 class="section-title">About Us</h2>
       <div class="lace-divider"></div>
       <p class="about-text">
-        סלון הכלות שש וארגמן הוקם לפני יותר מ-30 שנה על ידי יעל כהן גינדי,<br> מעצבת ותופרת מומחית בתחום
+        Shesh Ve'argaman bridal salon was established over 30 years ago<br> by Yael Cohen Gindi, an expert designer and seamstress.
         <br>
-        במקום יש מתפרה גדולה, חדרי מדידה, חנות בדים מטפחות ותכשיטים <br> ואפילו חזיות להתאמה מושלמת
+        The salon features a large workshop, fitting rooms,<br> a fabric, scarves and jewelry shop, and even bra fitting for the perfect look
         <br>
-        השמלות בסלון נתפרות על ידי צוות מיומן של מעצבות ותופרות
+        All dresses are tailored by a skilled team of designers and seamstresses ,<br> custom-made for each bride or from our ready-made collection
         <br>
-        בתפירה אישית לכלה או כשמלות קולקציה
+        We take pride in high-quality craftsmanship<br> using premium fabrics and maximum comfort
         <br>
-        התפירה נעשית תוך שימת דגש על תפירה איכותית מבדים באיכות מעולה ונוחות מקסימלית
-        <br>
-        אצלינו תפגשי צוות חם ומסור שיעשה הכל כדי לעזור לך, הכלה
-        <br>
-        למצוא את שמלת חלומותייך
+        You will be welcomed by a warm and dedicated team<br> who will do everything to help you find your dream dress
       </p>
     </div>
   </section>
@@ -111,7 +107,7 @@
   <!-- Contact -->
   <section class="contact-section" id="contactID">
     <div class="contact-inner">
-      <h2 class="contact-title">לתיאום פגישה</h2>
+      <h2 class="contact-title">Book an Appointment</h2>
       <div class="lace-divider"></div>
       <ul class="contact-list">
         <li>
@@ -145,40 +141,40 @@
   <!-- How to Get Here -->
   <section class="directions-section" id="navigationID">
     <div class="directions-inner">
-      <h2 class="section-title">איך מגיעים</h2>
+      <h2 class="section-title">Directions</h2>
       <div class="lace-divider"></div>
 
       <div class="directions-grid">
 
         <div class="directions-info">
           <div class="directions-address">
-            <h3 class="directions-subtitle">כתובתנו</h3>
-            <p>רחוב התירוש 7<br>יישוב חשמונאים</p>
+            <h3 class="directions-subtitle">Our Address</h3>
+            <p>7 HaTirosh Street<br>Hashmonaim</p>
             <a class="waze-link" href="https://www.waze.com/ul?ll=31.93223560%2C35.02314440&navigate=yes" target="_blank">
-              <i class="fab fa-waze"></i> נווט ב-Waze
+              <i class="fab fa-waze"></i> Navigate with Waze
             </a>
           </div>
 
           <div class="directions-transit">
-            <h3 class="directions-subtitle">הגעה בתחבורה ציבורית</h3>
+            <h3 class="directions-subtitle">By Public Transit</h3>
             <p class="transit-text">
-              מירושלים: 'קווים' 310, 320, 330, 340<br>
-              מבני ברק: 'קווים' 210, 220, 240<br><br>
-              יש לרדת בתחנה של צומת חשמונאים<br>
-              ולהתקדם ברגל כ-5 דק׳ הליכה<br>
-              לאחר הכניסה לישוב, בככר הראשונה יש לפנות ימינה<br>
-              אנחנו נמצאים בבית השלישי משמאל<br>
-              לגשת לכניסה הימנית של הבנין ולעלות במדרגות
+              From Jerusalem: 'Kavim' lines 310, 320, 330, 340<br>
+              From Bnei Brak: 'Kavim' lines 210, 220, 240<br><br>
+              Get off at the Hashmonaim Junction stop<br>
+              and walk approx. 5 minutes<br>
+              After entering the village, turn right at the first roundabout<br>
+              We are in the third house on the left<br>
+              Use the right entrance of the building and go up the stairs
             </p>
           </div>
 
           <div class="directions-accessible">
-            <h3 class="directions-subtitle"><i class="fas fa-wheelchair" aria-hidden="true"></i> כניסה נגישה וחניה</h3>
+            <h3 class="directions-subtitle"><i class="fas fa-wheelchair" aria-hidden="true"></i> Accessible Entrance &amp; Parking</h3>
             <p class="transit-text">
-              למבקרים עם מוגבלות ניידות — קיימת כניסה נגישה מהצד האחורי של הבניין.<br>
-              יש לנווט לרחוב התמר ולחנות ברחבה שבסוף הרחוב.<br>
-              במקום חניית נכים מסומנת.<br>
-              יש להיכנס לכניסה השמאלית של הבניין דרך שביל הגישה.
+              For visitors with mobility impairments — there is an accessible entrance at the rear of the building.<br>
+              Navigate to HaTamar Street and park in the plaza at the end of the street.<br>
+              A marked disabled parking space is available.<br>
+              Follow the accessible path to the left entrance of the building.
             </p>
           </div>
         </div>
@@ -188,7 +184,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3386.062471619345!2d35.02517872135333!3d31.93206123398591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502cd6912964f39%3A0xd19d46e1938529ee!2z15TXqteZ16jXldepIDcsINeX16nXnteV16DXkNeZ150!5e0!3m2!1siw!2sil!4v1572432098421!5m2!1siw!2sil"
             allowfullscreen=""
             loading="lazy"
-            title="מפת הסלון"
+            title="Salon Location Map"
           ></iframe>
         </div>
 
@@ -226,11 +222,11 @@
         var btn = document.getElementById('carouselPause');
         if (paused) {
           clearInterval(timer);
-          btn.setAttribute('aria-label', 'המשך גלריה');
+          btn.setAttribute('aria-label', 'Resume slideshow');
           btn.querySelector('i').className = 'fas fa-play';
         } else {
           startTimer();
-          btn.setAttribute('aria-label', 'עצור גלריה');
+          btn.setAttribute('aria-label', 'Pause slideshow');
           btn.querySelector('i').className = 'fas fa-pause';
         }
       };
@@ -250,21 +246,21 @@
       <a class="footer-icon" href="https://www.waze.com/ul?ll=31.93223560%2C35.02314440&navigate=yes" target="_blank" aria-label="Waze">
         <i class="fab fa-waze" style="color:#167dc1;"></i>
       </a>
-      <a class="footer-icon" href="https://www.facebook.com/profile.php?id=100005709820063" target="_blank" aria-label="פייסבוק">
+      <a class="footer-icon" href="https://www.facebook.com/profile.php?id=100005709820063" target="_blank" aria-label="Facebook">
         <i class="fab fa-facebook-f" style="color:#4d3ce3;"></i>
       </a>
       <a class="footer-icon" href="https://wa.me/+972544445194" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp" style="color:#1d8d21;"></i>
       </a>
-      <a class="footer-icon" href="mailto:calot.shsh@gmail.com" aria-label="אימייל">
+      <a class="footer-icon" href="mailto:calot.shsh@gmail.com" aria-label="Email">
         <i class="fas fa-envelope" style="color:#b912b6;"></i>
       </a>
     </div>
     <div class="footer-logo">
-      <img src="assets/otherImages/logo.png" alt="לוגו שש וארגמן">
+      <img src="assets/otherImages/logo.png" alt="Shesh Ve'argaman Logo">
     </div>
-    <p class="footer-rights">נבנה ע"י שש וארגמן &mdash; All rights reserved 2023</p>
-    <p class="footer-a11y">אתר זה עוצב תוך שמירה על עקרונות נגישות. <a href="accessibility.html">הצהרת נגישות</a> | לתמיכה <a href="mailto:calot.shsh@gmail.com">צרו קשר</a>.</p>
+    <p class="footer-rights">Shesh Ve'argaman &mdash; All rights reserved 2023</p>
+    <p class="footer-a11y">This website was designed with accessibility in mind. For support <a href="mailto:calot.shsh@gmail.com">contact us</a>.</p>
   </footer>
 
 </body>

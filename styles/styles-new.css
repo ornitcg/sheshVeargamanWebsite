@@ -121,6 +121,41 @@ body {
   color: var(--pink-dark);
 }
 
+.nav-lang {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.nav-lang-btn {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--black);
+  border-radius: 3px;
+  color: var(--black);
+  text-decoration: none;
+  line-height: 1;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-lang-btn:hover {
+  background: var(--black);
+  color: #fff;
+  border-bottom: none;
+}
+
+.nav-lang-btn.active {
+  background: var(--black);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .nav-lang {
+    padding: 0.9rem 1.5rem;
+  }
+}
+
 .nav-whatsapp {
   font-size: 1.7rem;
   color: #1d8d21;
@@ -439,6 +474,52 @@ body {
 
   .directions-map iframe {
     height: 260px;
+  }
+}
+
+/* ---- English pages: Raleway font for all Amatic SC headings ---- */
+[lang="en"] .site-title,
+[lang="en"] .site-subtitle,
+[lang="en"] .section-title,
+[lang="en"] .contact-title,
+[lang="en"] .directions-subtitle,
+[lang="en"] .a11y-heading {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.12em;
+  font-weight: 300;
+}
+
+[lang="en"] .site-title         { font-size: 4.5rem; text-transform: uppercase; }
+[lang="en"] .site-subtitle      { font-size: 1.4rem; }
+[lang="en"] .section-title      { font-size: 2.8rem; }
+[lang="en"] .contact-title      { font-size: 2.8rem; }
+[lang="en"] .directions-subtitle { font-size: 1.5rem; }
+[lang="en"] .a11y-heading        { font-size: 1.5rem; }
+
+[lang="en"] .faq-question {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 700px) {
+  [lang="en"] .site-title    { font-size: 2.8rem; }
+  [lang="en"] .site-subtitle { font-size: 1.1rem; }
+  [lang="en"] .section-title { font-size: 2rem; }
+  [lang="en"] .contact-title { font-size: 2rem; }
+  [lang="en"] .faq-question  { font-size: 0.95rem; }
+}
+
+/* ---- LTR overrides (English pages) ---- */
+[dir="ltr"] .directions-grid,
+[dir="ltr"] .faq-list {
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  [dir="ltr"] .nav-link {
+    text-align: left;
   }
 }
 

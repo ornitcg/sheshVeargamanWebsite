@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Brides — Shesh Ve'argaman</title>
+  <link rel="icon" href="icons/LogoIcon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles-new.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <h1 class="site-title">Shesh Ve'argaman</h1>
+    <p class="site-subtitle">Bridal Gowns in Hashmonaim</p>
+    <div class="lace-divider"></div>
+  </header>
+
+  <nav class="navbar" id="mainNav">
+    <button
+      class="hamburger-btn"
+      aria-label="Open menu"
+      onclick="
+        var nav = document.getElementById('mainNav');
+        nav.classList.toggle('open');
+        this.setAttribute('aria-label', nav.classList.contains('open') ? 'Close menu' : 'Open menu');
+      "
+    >
+      <i class="fas fa-bars  icon-open"></i>
+      <i class="fas fa-times icon-close"></i>
+    </button>
+
+    <ul class="nav-list">
+      <li><a class="nav-link" href="index-en.html">Home</a></li>
+      <li><a class="nav-link" href="ourBrides-en.html">Our Brides</a></li>
+      <li><a class="nav-link" href="faq-en.html">FAQ</a></li>
+      <li><a class="nav-link" href="index-en.html#navigationID">Directions</a></li>
+      <li><a class="nav-link" href="index-en.html#contactID">Contact</a></li>
+      <li><a class="nav-link" href="tel:0544445194">054-4445194</a></li>
+      <li><a class="nav-link nav-whatsapp fab fa-whatsapp" href="https://wa.me/+972544445194" target="_blank" aria-label="WhatsApp"></a></li>
+      <li class="nav-lang">
+        <a class="nav-lang-btn" href="ourBrides.html" aria-label="Hebrew version">עב</a>
+        <a class="nav-lang-btn active" href="ourBrides-en.html" aria-label="English version">EN</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Gallery -->
+  <section class="gallery-section" id="main-content">
+    <div class="gallery-inner">
+      <h2 class="section-title">Our Brides</h2>
+      <div class="lace-divider"></div>
+      <div class="masonry-gallery">
+        <div class="gallery-item" onclick="openLightbox(0)"><img src="assets/ourBrides/1.jpg"  alt="Bride 1"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(1)"><img src="assets/ourBrides/2.jpg"  alt="Bride 2"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(2)"><img src="assets/ourBrides/3.jpg"  alt="Bride 3"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(3)"><img src="assets/ourBrides/4.jpg"  alt="Bride 4"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(4)"><img src="assets/ourBrides/5.jpg"  alt="Bride 5"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(5)"><img src="assets/ourBrides/6.jpg"  alt="Bride 6"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(6)"><img src="assets/ourBrides/7.jpg"  alt="Bride 7"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(7)"><img src="assets/ourBrides/8.jpg"  alt="Bride 8"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(8)"><img src="assets/ourBrides/9.jpg"  alt="Bride 9"  loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(9)"><img src="assets/ourBrides/10.jpg" alt="Bride 10" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(10)"><img src="assets/ourBrides/11.jpg" alt="Bride 11" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(11)"><img src="assets/ourBrides/12.jpg" alt="Bride 12" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(12)"><img src="assets/ourBrides/13.jpg" alt="Bride 13" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(13)"><img src="assets/ourBrides/14.jpg" alt="Bride 14" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(14)"><img src="assets/ourBrides/15.jpg" alt="Bride 15" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(15)"><img src="assets/ourBrides/16.jpg" alt="Bride 16" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(16)"><img src="assets/ourBrides/17.jpg" alt="Bride 17" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(17)"><img src="assets/ourBrides/18.jpg" alt="Bride 18" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(18)"><img src="assets/ourBrides/19.jpg" alt="Bride 19" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(19)"><img src="assets/ourBrides/20.jpg" alt="Bride 20" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(20)"><img src="assets/ourBrides/21.jpg" alt="Bride 21" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(21)"><img src="assets/ourBrides/22.jpg" alt="Bride 22" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(22)"><img src="assets/ourBrides/23.jpg" alt="Bride 23" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(23)"><img src="assets/ourBrides/24.jpg" alt="Bride 24" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(24)"><img src="assets/ourBrides/25.jpg" alt="Bride 25" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(25)"><img src="assets/ourBrides/26.jpg" alt="Bride 26" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(26)"><img src="assets/ourBrides/27.jpg" alt="Bride 27" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(27)"><img src="assets/ourBrides/28.jpg" alt="Bride 28" loading="lazy"></div>
+        <div class="gallery-item" onclick="openLightbox(28)"><img src="assets/ourBrides/29.jpg" alt="Bride 29" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox" id="lightbox" onclick="closeLightboxOnBackdrop(event)">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-arrow lightbox-prev" onclick="lightboxMove(-1); event.stopPropagation();" aria-label="Previous">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Bride photo">
+    <button class="lightbox-arrow lightbox-next" onclick="lightboxMove(1); event.stopPropagation();" aria-label="Next">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <div class="lightbox-zoom-btns">
+      <button class="lightbox-zoom-btn" onclick="zoomOut(); event.stopPropagation();" aria-label="Zoom out">
+        <i class="fas fa-minus"></i>
+      </button>
+      <button class="lightbox-zoom-btn" onclick="zoomIn(); event.stopPropagation();" aria-label="Zoom in">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-icons">
+      <a class="footer-icon" href="https://www.waze.com/ul?ll=31.93223560%2C35.02314440&navigate=yes" target="_blank" aria-label="Waze">
+        <i class="fab fa-waze" style="color:#167dc1;"></i>
+      </a>
+      <a class="footer-icon" href="https://www.facebook.com/profile.php?id=100005709820063" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f" style="color:#4d3ce3;"></i>
+      </a>
+      <a class="footer-icon" href="https://wa.me/+972544445194" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp" style="color:#1d8d21;"></i>
+      </a>
+      <a class="footer-icon" href="mailto:calot.shsh@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope" style="color:#b912b6;"></i>
+      </a>
+    </div>
+    <div class="footer-logo">
+      <img src="assets/otherImages/logo.png" alt="Shesh Ve'argaman Logo">
+    </div>
+    <p class="footer-rights">Shesh Ve'argaman &mdash; All rights reserved 2023</p>
+    <p class="footer-a11y">This website was designed with accessibility in mind. For support <a href="mailto:calot.shsh@gmail.com">contact us</a>.</p>
+  </footer>
+
+  <script src="scripts/navbar.js"></script>
+  <script src="scripts/lightbox.js"></script>
+
+</body>
+</html>
