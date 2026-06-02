@@ -7,6 +7,15 @@ fetch(`https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`)
     const gallery = document.getElementById('wedding-gallery');
     const imageUrls = [];
 
+    var numCols = window.innerWidth <= 700 ? 2 : window.innerWidth <= 900 ? 3 : 4;
+    var cols = [];
+    for (var i = 0; i < numCols; i++) {
+      var col = document.createElement('div');
+      col.className = 'masonry-col';
+      gallery.appendChild(col);
+      cols.push(col);
+    }
+
     const observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (!entry.isIntersecting) return;
@@ -21,7 +30,7 @@ fetch(`https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`)
       });
     }, { threshold: 0.05 });
 
-    data.resources.forEach((img, index) => {
+    data.resources.forEach(function(img, index) {
       const url = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${img.public_id}.${img.format}`;
       imageUrls.push(url);
 
@@ -38,20 +47,9 @@ fetch(`https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`)
         }
       });
       item.innerHTML = `<img src="${url}" alt="כלה ${index + 1}" loading="lazy">`;
-      gallery.appendChild(item);
+      cols[index % numCols].appendChild(item);
       observer.observe(item);
     });
 
     window.__cloudinaryImages = imageUrls;
-
-    var msnry = new Masonry(gallery, {
-      itemSelector: '.gallery-item',
-      columnWidth: '.gallery-item',
-      percentPosition: true,
-      gutter: 14
-    });
-
-    imagesLoaded(gallery, function() {
-      msnry.layout();
-    });
   });
