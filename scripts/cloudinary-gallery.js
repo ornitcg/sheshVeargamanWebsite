@@ -43,4 +43,15 @@ fetch(`https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`)
     });
 
     window.__cloudinaryImages = imageUrls;
+
+    var msnry = new Masonry(gallery, {
+      itemSelector: '.gallery-item',
+      columnWidth: '.gallery-item',
+      percentPosition: true,
+      gutter: 14
+    });
+
+    imagesLoaded(gallery, function() {
+      msnry.layout();
+    });
   });
