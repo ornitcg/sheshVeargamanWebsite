@@ -7,6 +7,8 @@ fetch(`https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`)
     const gallery = document.getElementById('wedding-gallery');
     const imageUrls = [];
 
+    data.resources.sort(() => Math.random() - 0.5);
+
     data.resources.forEach((img, index) => {
       const url = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${img.public_id}.${img.format}`;
       imageUrls.push(url);
