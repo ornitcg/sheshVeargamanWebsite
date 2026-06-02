@@ -26,6 +26,9 @@ fetch(`https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`)
         }
       });
       item.innerHTML = `<img src="${url}" alt="כלה ${index + 1}" loading="lazy">`;
+      const imgEl = item.querySelector('img');
+      imgEl.addEventListener('load', function() { imgEl.classList.add('loaded'); });
+      imgEl.addEventListener('error', function() { imgEl.classList.add('loaded'); });
       gallery.appendChild(item);
     });
 
