@@ -1,7 +1,6 @@
 (function () {
 
   // ---- State ----
-  var images = [];
   var currentIndex = 0;
   var zoomScale = 1;
   var zoomTX = 0;
@@ -9,12 +8,7 @@
   var MIN_SCALE = 1;
   var MAX_SCALE = 4;
 
-  function getImages() {
-    return window.__cloudinaryImages || [];
-  }
-  Object.defineProperty(window, 'images', {
-    get: function() { return getImages(); }
-  });
+  function images() { return window.__cloudinaryImages || []; }
 
   function img()      { return document.getElementById('lightboxImg'); }
   function overlay()  { return document.getElementById('lightbox'); }
@@ -141,7 +135,7 @@
   window.openLightbox = function (index) {
     currentIndex = index;
     resetZoom();
-    img().src = images[index];
+    img().src = images()[index];
     overlay().classList.add('open');
     document.body.style.overflow = 'hidden';
     lastFocusedElement = document.activeElement;
@@ -162,9 +156,9 @@
   };
 
   window.lightboxMove = function (dir) {
-    currentIndex = (currentIndex + dir + images.length) % images.length;
+    currentIndex = (currentIndex + dir + images().length) % images().length;
     resetZoom();
-    img().src = images[currentIndex];
+    img().src = images()[currentIndex];
   };
 
   // ---- Focus trap inside lightbox ----
