@@ -7,6 +7,20 @@ fetch(`https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`)
     const gallery = document.getElementById('wedding-gallery');
     const imageUrls = [];
 
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting) return;
+        const imgEl = entry.target.querySelector('img');
+        if (imgEl.complete) {
+          imgEl.classList.add('loaded');
+        } else {
+          imgEl.addEventListener('load',  function() { imgEl.classList.add('loaded'); });
+          imgEl.addEventListener('error', function() { imgEl.classList.add('loaded'); });
+        }
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.05 });
+
     data.resources.forEach((img, index) => {
       const url = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/${img.public_id}.${img.format}`;
       imageUrls.push(url);
@@ -24,11 +38,8 @@ fetch(`https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`)
         }
       });
       item.innerHTML = `<img src="${url}" alt="כלה ${index + 1}" loading="lazy">`;
-      const imgEl = item.querySelector('img');
-      imgEl.style.transitionDelay = (index * 0.05) + 's';
-      imgEl.addEventListener('load', function() { imgEl.classList.add('loaded'); });
-      imgEl.addEventListener('error', function() { imgEl.classList.add('loaded'); });
       gallery.appendChild(item);
+      observer.observe(item);
     });
 
     window.__cloudinaryImages = imageUrls;
