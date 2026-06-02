@@ -9,8 +9,11 @@
   var MIN_SCALE = 1;
   var MAX_SCALE = 4;
 
-  document.querySelectorAll('.gallery-item img').forEach(function (img) {
-    images.push(img.src);
+  function getImages() {
+    return window.__cloudinaryImages || [];
+  }
+  Object.defineProperty(window, 'images', {
+    get: function() { return getImages(); }
   });
 
   function img()      { return document.getElementById('lightboxImg'); }
