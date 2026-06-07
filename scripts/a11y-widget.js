@@ -2,10 +2,14 @@
   var FONT_STEPS = [90, 100, 110, 120, 130];
   var fontIndex = 1;
   var highContrast = false;
+  var noMotion = false;
+  var highlightLinks = false;
 
   var saved = JSON.parse(localStorage.getItem('a11y') || '{}');
   if (saved.fontIndex !== undefined) fontIndex = saved.fontIndex;
   if (saved.highContrast !== undefined) highContrast = saved.highContrast;
+  if (saved.noMotion !== undefined) noMotion = saved.noMotion;
+  if (saved.highlightLinks !== undefined) highlightLinks = saved.highlightLinks;
 
   var css = "\n" +
     "  #a11y-widget {\n" +
@@ -126,10 +130,22 @@
     "    display: block;\n" +
     "  }\n" +
     "  #a11y-reset:hover { background: #e8c5c2; }\n" +
-    "  html.a11y-contrast { filter: contrast(1.6); }\n";
+    "  html.a11y-contrast { filter: contrast(1.6); }\n" +
+    "  html.a11y-no-motion *, html.a11y-no-motion *::before, html.a11y-no-motion *::after {\n" +
+    "    animation-duration: 0.001ms !important;\n" +
+    "    animation-iteration-count: 1 !important;\n" +
+    "    transition-duration: 0.001ms !important;\n" +
+    "    scroll-behavior: auto !important;\n" +
+    "  }\n" +
+    "  html.a11y-links a {\n" +
+    "    text-decoration: underline !important;\n" +
+    "    outline: 2px solid #8b5555 !important;\n" +
+    "    outline-offset: 2px !important;\n" +
+    "    border-radius: 2px;\n" +
+    "  }\n";
 
   function savePrefs() {
-    localStorage.setItem('a11y', JSON.stringify({ fontIndex: fontIndex, highContrast: highContrast }));
+    localStorage.setItem('a11y', JSON.stringify({ fontIndex: fontIndex, highContrast: highContrast, noMotion: noMotion, highlightLinks: highlightLinks }));
   }
 
   function applyFontSize() {
@@ -140,20 +156,36 @@
     document.documentElement.classList.toggle('a11y-contrast', highContrast);
   }
 
+  function applyNoMotion() {
+    document.documentElement.classList.toggle('a11y-no-motion', noMotion);
+  }
+
+  function applyHighlightLinks() {
+    document.documentElement.classList.toggle('a11y-links', highlightLinks);
+  }
+
   function updateButtons() {
     var contrastBtn = document.getElementById('a11y-contrast-btn');
     var fontUpBtn = document.getElementById('a11y-font-up');
     var fontDownBtn = document.getElementById('a11y-font-down');
+    var noMotionBtn = document.getElementById('a11y-no-motion-btn');
+    var linksBtn = document.getElementById('a11y-links-btn');
     if (contrastBtn) contrastBtn.classList.toggle('active', highContrast);
     if (fontUpBtn) fontUpBtn.classList.toggle('active', fontIndex > 1);
     if (fontDownBtn) fontDownBtn.classList.toggle('active', fontIndex < 1);
+    if (noMotionBtn) noMotionBtn.classList.toggle('active', noMotion);
+    if (linksBtn) linksBtn.classList.toggle('active', highlightLinks);
   }
 
   function reset() {
     fontIndex = 1;
     highContrast = false;
+    noMotion = false;
+    highlightLinks = false;
     applyFontSize();
     applyContrast();
+    applyNoMotion();
+    applyHighlightLinks();
     updateButtons();
     savePrefs();
   }
@@ -176,6 +208,12 @@
         '</button>' +
         '<button class="a11y-option" id="a11y-contrast-btn">' +
           '<span class="a11y-icon">◑</span> ניגודיות גבוהה' +
+        '</button>' +
+        '<button class="a11y-option" id="a11y-no-motion-btn">' +
+          '<span class="a11y-icon">⏸</span> עצור אנימציות' +
+        '</button>' +
+        '<button class="a11y-option" id="a11y-links-btn">' +
+          '<span class="a11y-icon">🔗</span> הדגש קישורים' +
         '</button>' +
         '<button id="a11y-reset">איפוס</button>' +
       '</div>' +
@@ -219,6 +257,20 @@
       savePrefs();
     });
 
+    document.getElementById('a11y-no-motion-btn').addEventListener('click', function () {
+      noMotion = !noMotion;
+      applyNoMotion();
+      updateButtons();
+      savePrefs();
+    });
+
+    document.getElementById('a11y-links-btn').addEventListener('click', function () {
+      highlightLinks = !highlightLinks;
+      applyHighlightLinks();
+      updateButtons();
+      savePrefs();
+    });
+
     document.getElementById('a11y-reset').addEventListener('click', reset);
 
     document.addEventListener('click', function (e) {
@@ -230,6 +282,8 @@
 
     applyFontSize();
     applyContrast();
+    applyNoMotion();
+    applyHighlightLinks();
     updateButtons();
   }
 
