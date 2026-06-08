@@ -79,7 +79,7 @@ body {
 
 .site-subtitle {
   font-family: 'Amatic SC', cursive;
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   color: var(--pink-dark);
   margin-top: 0.2rem;
 }
@@ -272,7 +272,7 @@ body {
   }
 
   .site-title    { font-size: 3.8rem; }
-  .site-subtitle { font-size: 1.7rem; }
+  .site-subtitle { font-size: 2rem; }
 }
 
 /* ---- Hero Carousel ---- */
