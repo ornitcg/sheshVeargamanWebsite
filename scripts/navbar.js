@@ -4,6 +4,8 @@
   var threshold = 8;
 
   window.addEventListener('scroll', function () {
+    if (window.innerWidth <= 700) return;
+
     var currentScrollY = window.scrollY;
 
     if (currentScrollY <= 0) {
