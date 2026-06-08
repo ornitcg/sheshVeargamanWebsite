@@ -227,6 +227,12 @@ body {
     font-size: 1.4rem;
     color: var(--pink-dark);
     pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .navbar--header-hidden .navbar-tagline {
+    opacity: 1;
   }
 
   .nav-list {

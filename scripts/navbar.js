@@ -1,5 +1,13 @@
 (function () {
   var navbar = document.getElementById('mainNav');
+
+  var header = document.querySelector('.site-header');
+  if (header && document.querySelector('.navbar-tagline')) {
+    var observer = new IntersectionObserver(function (entries) {
+      navbar.classList.toggle('navbar--header-hidden', !entries[0].isIntersecting);
+    });
+    observer.observe(header);
+  }
   var lastScrollY = window.scrollY;
   var threshold = 8;
 
