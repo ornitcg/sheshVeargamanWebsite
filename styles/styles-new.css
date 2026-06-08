@@ -219,7 +219,9 @@ body {
 
   .navbar-tagline {
     display: block;
-    flex: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
     text-align: center;
     font-family: 'Amatic SC', cursive;
     font-size: 1.4rem;
