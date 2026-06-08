@@ -193,6 +193,10 @@ body {
   color: var(--black);
 }
 
+.navbar-tagline {
+  display: none;
+}
+
 /* toggle icons */
 .icon-close { display: none; }
 
@@ -201,8 +205,26 @@ body {
 
 /* ---- Mobile ---- */
 @media (max-width: 700px) {
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
   .hamburger-btn {
     display: block;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .navbar-tagline {
+    display: block;
+    flex: 1;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--pink-dark);
+    letter-spacing: 0.03em;
+    pointer-events: none;
   }
 
   .nav-list {
@@ -211,6 +233,7 @@ body {
     align-items: stretch;
     gap: 0;
     padding: 0;
+    width: 100%;
   }
 
   .navbar.open .nav-list {
