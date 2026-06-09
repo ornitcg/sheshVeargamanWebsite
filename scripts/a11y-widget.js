@@ -228,7 +228,7 @@
         '<button id="a11y-dismiss" aria-label="סגור ווידג\'ט נגישות" title="הסתר">✕</button>' +
       '</div>';
 
-    document.body.appendChild(widget);
+    document.body.insertBefore(widget, document.body.firstChild);
 
     var btn = document.getElementById('a11y-btn');
     var panel = document.getElementById('a11y-panel');
