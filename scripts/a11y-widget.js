@@ -21,7 +21,9 @@
     "  #a11y-btn-wrap {\n" +
     "    position: relative;\n" +
     "    display: inline-block;\n" +
+    "    cursor: grab;\n" +
     "  }\n" +
+    "  #a11y-btn-wrap:active { cursor: grabbing; }\n" +
     "  #a11y-btn {\n" +
     "    width: 52px;\n" +
     "    height: 52px;\n" +
@@ -232,7 +234,65 @@
     var panel = document.getElementById('a11y-panel');
     var dismissBtn = document.getElementById('a11y-dismiss');
 
+    // --- Drag ---
+    var isDragging = false, didDrag = false;
+    var dragStartX, dragStartY, widgetStartX, widgetStartY;
+
+    var savedPos = JSON.parse(localStorage.getItem('a11y-pos') || 'null');
+    if (savedPos) {
+      widget.style.left   = savedPos.left;
+      widget.style.top    = savedPos.top;
+      widget.style.bottom = 'auto';
+      widget.style.right  = 'auto';
+    }
+
+    function startDrag(clientX, clientY) {
+      var rect = widget.getBoundingClientRect();
+      widget.style.left   = rect.left + 'px';
+      widget.style.top    = rect.top  + 'px';
+      widget.style.bottom = 'auto';
+      widget.style.right  = 'auto';
+      dragStartX   = clientX;
+      dragStartY   = clientY;
+      widgetStartX = rect.left;
+      widgetStartY = rect.top;
+      isDragging   = true;
+      didDrag      = false;
+      document.body.style.userSelect = 'none';
+    }
+
+    function onDrag(clientX, clientY) {
+      if (!isDragging) return;
+      var dx = clientX - dragStartX;
+      var dy = clientY - dragStartY;
+      if (Math.abs(dx) > 4 || Math.abs(dy) > 4) didDrag = true;
+      if (!didDrag) return;
+      var newX = Math.max(0, Math.min(window.innerWidth  - widget.offsetWidth,  widgetStartX + dx));
+      var newY = Math.max(0, Math.min(window.innerHeight - widget.offsetHeight, widgetStartY + dy));
+      widget.style.left = newX + 'px';
+      widget.style.top  = newY + 'px';
+    }
+
+    function endDrag() {
+      if (!isDragging) return;
+      isDragging = false;
+      document.body.style.userSelect = '';
+      if (didDrag) {
+        localStorage.setItem('a11y-pos', JSON.stringify({ left: widget.style.left, top: widget.style.top }));
+      }
+    }
+
+    var btnWrap = document.getElementById('a11y-btn-wrap');
+    btnWrap.addEventListener('mousedown',  function (e) { startDrag(e.clientX, e.clientY); });
+    btnWrap.addEventListener('touchstart', function (e) { startDrag(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
+    document.addEventListener('mousemove',  function (e) { onDrag(e.clientX, e.clientY); });
+    document.addEventListener('touchmove',  function (e) { if (isDragging && didDrag) e.preventDefault(); onDrag(e.touches[0].clientX, e.touches[0].clientY); }, { passive: false });
+    document.addEventListener('mouseup',   endDrag);
+    document.addEventListener('touchend',  endDrag);
+    // --- End Drag ---
+
     btn.addEventListener('click', function () {
+      if (didDrag) return;
       var isOpen = panel.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(isOpen));
     });
