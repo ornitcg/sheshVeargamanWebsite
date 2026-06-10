@@ -197,8 +197,12 @@
     styleEl.textContent = css;
     document.head.appendChild(styleEl);
 
-    var widget = document.createElement('div');
-    widget.id = 'a11y-widget';
+    var widget = document.getElementById('a11y-widget');
+    if (!widget) {
+      widget = document.createElement('div');
+      widget.id = 'a11y-widget';
+      document.body.prepend(widget);
+    }
     widget.innerHTML =
       '<div id="a11y-panel" role="dialog" aria-label="אפשרויות נגישות">' +
         '<p id="a11y-panel-title">נגישות</p>' +
@@ -227,8 +231,6 @@
         '</button>' +
         '<button id="a11y-dismiss" aria-label="סגור ווידג\'ט נגישות" title="הסתר">✕</button>' +
       '</div>';
-
-    document.body.insertBefore(widget, document.body.firstChild);
 
     var btn = document.getElementById('a11y-btn');
     var panel = document.getElementById('a11y-panel');
