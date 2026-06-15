@@ -731,7 +731,8 @@ body {
 .gallery-item img {
   width: 100%;
   display: block;
-  transition: transform 0.4s, opacity 0.3s;
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.5s ease;
 }
 
 .gallery-item:hover img {
@@ -1026,11 +1027,6 @@ body {
   .contact-list a {
     font-size: 1.2rem;
   }
-}
-
-.gallery-item img {
-  opacity: 0;
-  transition: opacity 0.5s ease;
 }
 
 .gallery-item img.loaded {
