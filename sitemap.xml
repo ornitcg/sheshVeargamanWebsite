@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/index-en.html" />
+  </url>
+  <url>
+    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/index-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/index-en.html" />
+  </url>
+
+  <url>
+    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides-en.html" />
+  </url>
+  <url>
+    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides-en.html" />
+  </url>
+
+  <url>
+    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/faq-en.html" />
+  </url>
+  <url>
+    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/faq-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/faq-en.html" />
+  </url>
+
+  <url>
+    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/accessibility.html</loc>
+  </url>
+
+</urlset>
