@@ -6,6 +6,7 @@ fetch(`https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`)
   .then(data => {
     const gallery = document.getElementById('wedding-gallery');
     const imageUrls = [];
+    const isEnglish = document.documentElement.lang === 'en';
 
     var numCols = window.innerWidth <= 700 ? 2 : window.innerWidth <= 900 ? 3 : 4;
     var cols = [];
@@ -30,7 +31,7 @@ fetch(`https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`)
       item.className = 'gallery-item';
       item.setAttribute('tabindex', '0');
       item.setAttribute('role', 'button');
-      item.setAttribute('aria-label', 'פתח תמונה ' + (index + 1));
+      item.setAttribute('aria-label', (isEnglish ? 'Open image ' : 'פתח תמונה ') + (index + 1));
       item.onclick = function() { openLightbox(index); };
       item.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -38,7 +39,10 @@ fetch(`https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`)
           openLightbox(index);
         }
       });
-      item.innerHTML = '<img src="' + url + '" alt="כלה ' + (index + 1) + '" loading="lazy">';
+      const altText = isEnglish
+        ? 'Modest bridal gown, bride ' + (index + 1)
+        : 'כלה בשמלת כלה צנועה ' + (index + 1);
+      item.innerHTML = '<img src="' + url + '" alt="' + altText + '" loading="lazy">';
 
       var imgEl = item.querySelector('img');
 
