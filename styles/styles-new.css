@@ -937,6 +937,10 @@ body {
   font-weight: bold;
 }
 
+.a11y-list--plain {
+  padding-right: 0;
+}
+
 .a11y-list--plain li::before {
   content: none;
 }
