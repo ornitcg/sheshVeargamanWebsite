@@ -3,40 +3,40 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/index.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/index-en.html" />
+    <loc>https://calot.net/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://calot.net/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calot.net/index-en.html" />
   </url>
   <url>
-    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/index-en.html</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/index.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/index-en.html" />
-  </url>
-
-  <url>
-    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides.html</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides-en.html" />
-  </url>
-  <url>
-    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides-en.html</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/ourBrides-en.html" />
+    <loc>https://calot.net/index-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://calot.net/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calot.net/index-en.html" />
   </url>
 
   <url>
-    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/faq.html</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/faq.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/faq-en.html" />
+    <loc>https://calot.net/ourBrides.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://calot.net/ourBrides.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calot.net/ourBrides-en.html" />
   </url>
   <url>
-    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/faq-en.html</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ornitcg.github.io/sheshVeargamanWebsite/faq.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ornitcg.github.io/sheshVeargamanWebsite/faq-en.html" />
+    <loc>https://calot.net/ourBrides-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://calot.net/ourBrides.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calot.net/ourBrides-en.html" />
   </url>
 
   <url>
-    <loc>https://ornitcg.github.io/sheshVeargamanWebsite/accessibility.html</loc>
+    <loc>https://calot.net/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://calot.net/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calot.net/faq-en.html" />
+  </url>
+  <url>
+    <loc>https://calot.net/faq-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://calot.net/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://calot.net/faq-en.html" />
+  </url>
+
+  <url>
+    <loc>https://calot.net/accessibility.html</loc>
   </url>
 
 </urlset>
